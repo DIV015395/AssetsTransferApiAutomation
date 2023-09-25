@@ -1,0 +1,1 @@
+{"uuid":"fcbb411f-aea6-4643-b434-c384fb117c48","name":"AssetsTransferApiAutomation","children":["66d4a8ea-8408-4d30-b5ae-0c122a15f047"],"befores":[],"afters":[{"name":"assetTransferRevoke","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1695657462495,"stop":1695657463813}],"start":1695657454003,"stop":1695657463814}
