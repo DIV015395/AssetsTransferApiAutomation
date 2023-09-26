@@ -1,5 +1,7 @@
 package org.example;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import io.restassured.RestAssured;
@@ -9,6 +11,12 @@ import io.restassured.response.Response;
 //Login with jai.malviyanagar1 = token
 public class AssetInventoryListing {
 
+
+    public ExtentTest test;
+    public AssetInventoryListing(ExtentTest test)
+    {
+        this.test = test;
+    }
 
     public void testInventoryListing() {
         // Send a GET request with the authorization header
@@ -24,14 +32,18 @@ public class AssetInventoryListing {
         double responseTimeInSeconds = responseTime / 1000.0;
 
         System.out.println("Response Time in Seconds: " + responseTimeInSeconds);
+        test.log(Status.INFO, "Response Time in Seconds: " + responseTimeInSeconds);
 
         if (statusCode ==200)
         {
             System.out.println("Inventory Listing working fine with Status code : "+statusCode);
+            test.log(Status.INFO, "Inventory Listing working fine with Status code : "+statusCode);
         }
         else
         {
             System.out.println("Not Working with Status code : "+statusCode);
+            test.log(Status.INFO, "Not Working with Status code : "+statusCode);
+
         }
 
         String jsonResponse = response.getBody().asString();
@@ -48,6 +60,8 @@ public class AssetInventoryListing {
 
             // Print the formatted JSON
             System.out.println(prettyJson);
+            test.log(Status.INFO, "JSON Response Body : "+prettyJson);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

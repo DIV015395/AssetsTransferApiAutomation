@@ -5,7 +5,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class ExtentManager {
     private static ExtentReports extent;
-
     public static synchronized ExtentReports getInstance() {
         if (extent == null) {
             ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent-report.html");
