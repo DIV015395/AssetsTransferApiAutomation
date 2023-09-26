@@ -6,7 +6,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-//Login with jai.malviyanagar1
+//Login with jai.malviyanagar1 = token
 public class AssetInventoryListing {
 
 
