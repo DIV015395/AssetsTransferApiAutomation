@@ -37,12 +37,12 @@ public class AssetInventoryListing {
         if (statusCode ==200)
         {
             System.out.println("Inventory Listing working fine with Status code : "+statusCode);
-            test.log(Status.INFO, "Inventory Listing working fine with Status code : "+statusCode);
+            test.pass("Inventory Listing working fine with Status code : "+statusCode);
         }
         else
         {
             System.out.println("Not Working with Status code : "+statusCode);
-            test.log(Status.INFO, "Not Working with Status code : "+statusCode);
+            test.fail("Not Working with Status code : "+statusCode);
 
         }
 

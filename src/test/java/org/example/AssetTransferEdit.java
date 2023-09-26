@@ -1,4 +1,5 @@
 package org.example;
+import com.aventstack.extentreports.ExtentTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -6,7 +7,11 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
 public class AssetTransferEdit {
-
+    public ExtentTest test;
+    public AssetTransferEdit(ExtentTest test)
+    {
+        this.test = test;
+    }
     public void assetTransferEdit() {
         // Create a JSON object for the request body
         JSONObject requestBody = new JSONObject();

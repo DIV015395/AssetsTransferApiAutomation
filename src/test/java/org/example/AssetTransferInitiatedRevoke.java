@@ -1,6 +1,7 @@
 //User jai.malviyanagar1 = token
 
 package org.example;
+import com.aventstack.extentreports.ExtentTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -8,7 +9,11 @@ import org.json.JSONObject;
 import org.junit.Test;
 public class AssetTransferInitiatedRevoke {
 
-
+    public ExtentTest test;
+    public AssetTransferInitiatedRevoke(ExtentTest test)
+    {
+        this.test = test;
+    }
     public void testRevokeAsset() {
         // Create a JSON object for the request body
         JSONObject requestBody = new JSONObject();

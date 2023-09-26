@@ -2,6 +2,7 @@
 
 
 package org.example;
+import com.aventstack.extentreports.ExtentTest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import io.restassured.RestAssured;
@@ -12,6 +13,11 @@ import org.junit.Test;
 
 public class InitiatedAssetListing
 {
+    public ExtentTest test;
+    public InitiatedAssetListing(ExtentTest test)
+    {
+        this.test = test;
+    }
     public void testGetInitiatedAssets() {
         // Set the base URI for the API
 

@@ -1,6 +1,7 @@
 package org.example;
 
 
+import com.aventstack.extentreports.ExtentTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -10,7 +11,11 @@ import org.junit.Test;
 
 public class AssetRequestAccept
 {
-
+    public ExtentTest test;
+    public AssetRequestAccept(ExtentTest test)
+    {
+        this.test = test;
+    }
     public void testAssetRequestAccept()
     {
         // Create a JSON object for the request body

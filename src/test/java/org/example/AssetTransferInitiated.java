@@ -1,6 +1,7 @@
 //User jai.malviyanagar1 = token
 
 package org.example;
+import com.aventstack.extentreports.ExtentTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -9,7 +10,11 @@ import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 public class AssetTransferInitiated {
-
+    public ExtentTest test;
+    public AssetTransferInitiated(ExtentTest test)
+    {
+        this.test = test;
+    }
     public void testAssetTransfer() {
         // Create a JSON object for the entire request
         JSONObject requestBody = new JSONObject();

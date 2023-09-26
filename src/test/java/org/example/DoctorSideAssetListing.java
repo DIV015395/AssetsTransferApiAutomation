@@ -1,5 +1,6 @@
 package org.example;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import io.restassured.RestAssured;
@@ -7,6 +8,12 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 //Login with jai.banipark1 as Doctor
 public class DoctorSideAssetListing {
+
+    public ExtentTest test;
+    public DoctorSideAssetListing(ExtentTest test)
+    {
+        this.test = test;
+    }
 
 
     public void testDoctorSideAssetListing() {
