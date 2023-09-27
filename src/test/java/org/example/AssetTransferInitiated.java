@@ -2,6 +2,7 @@
 
 package org.example;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -102,22 +103,29 @@ public class AssetTransferInitiated {
         double responseTimeInSeconds = responseTime / 1000.0;
 
         System.out.println("Response Time in Seconds: " + responseTimeInSeconds);
+
 // Optionally, you can also print the response message
         String responseMessage = response.getBody().asString();
         System.out.println("Response Message: " + responseMessage);
+        test.log(Status.INFO, "Post Request for Asset Initiation");
+        test.log(Status.INFO, "Response Time in Seconds: " + responseTimeInSeconds);
 
 
 // Conditionally handle different status codes
         if (statusCode == 200) {
-            // Handle case when status code is 200 (initiated)
+
+            test.pass("Asset initiated with Status code "+statusCode);
             System.out.println("Initiated");
         } else if (statusCode == 208) {
             // Handle case when status code is 208 (already initiated)
+            test.pass("Asset Already initiated with Status code "+statusCode);
             System.out.println("Already Initiated");
         } else if (statusCode == 400) {
             // Handle case when status code is 404 (server-side issue)
+            test.fail("asset initiated failed with Status code "+statusCode);
             System.out.println("Failed to read request, Bad Request");
         } else {
+            test.fail("asset initiated failed with Status code "+statusCode);
             // Handle other status codes as needed
             System.out.println("Unknown Status Code: " + statusCode);
         }
