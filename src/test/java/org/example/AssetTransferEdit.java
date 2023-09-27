@@ -1,5 +1,6 @@
 package org.example;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -15,7 +16,7 @@ public class AssetTransferEdit {
     public void assetTransferEdit() {
         // Create a JSON object for the request body
         JSONObject requestBody = new JSONObject();
-        requestBody.put("assetTransId", 23);
+        requestBody.put("assetTransId", EditAssetTransferIdFromDatabase.maxIdFromUatPrmJava());
         requestBody.put("receiverId", 12);
         requestBody.put("receiverType", "Doctor");
         requestBody.put("status", "Working");
@@ -79,25 +80,27 @@ public class AssetTransferEdit {
                 .when()
                 .post("http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081/asset/edit-initiated-asset");
 
-
         int statusCode = response.getStatusCode();
         long responseTime = response.time();
-// Optionally, you can convert the response time to seconds
         double responseTimeInSeconds = responseTime / 1000.0;
         System.out.println("Response Time in Seconds: " + responseTimeInSeconds);
-// Optionally, you can also print the response message
         String responseMessage = response.getBody().asString();
         System.out.println("Response Message: " + responseMessage);
 
+        test.log(Status.INFO, "Post Request for Asset Transfer Edit");
+        test.log(Status.INFO, "Response Time in Seconds: " + responseTimeInSeconds);
+        test.log(Status.INFO,"Response Message : "+ responseMessage);
 
-// Conditionally handle different status codes
+
         if (statusCode == 200) {
             // Handle case when status code is 200 (initiated)
-            System.out.println("Asset Transfer Successful Edit");
+            System.out.println("Asset Transfer Edit Successful");
+            test.pass("Asset Transfer Edit Successful");
 
         }
         else
         {
+            test.fail("Asset Transfer Edit Failed with Status code "+statusCode);
             System.out.println("Unknown Status Code: " + statusCode);
         }
     }

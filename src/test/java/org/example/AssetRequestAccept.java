@@ -97,6 +97,7 @@ public class AssetRequestAccept
         String responseMessage = response.getBody().asString();
         System.out.println("Response Message: " + responseMessage);
         test.log(Status.INFO, "Response Message: " + responseMessage);
+
         if(statusCode ==200)
         {
             test.pass("Asset Request accept by doctor with status code "+statusCode);
@@ -105,6 +106,7 @@ public class AssetRequestAccept
         {
             test.fail("Asset Request accept not working "+statusCode);
         }
+
     }
 }
 

@@ -4,9 +4,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.example.AssetRequestAccept;
 import org.example.AssetTransferInitiated;
-import org.example.AssetTransferInitiatedRevoke;
+import org.example.AssetTransferRevoke;
 import org.example.ExtentManager;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class AssetTransferInitiatedRequestAccept
@@ -17,7 +16,7 @@ public class AssetTransferInitiatedRequestAccept
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Assets Initiated And Accept by Doctor", "I.T initiated the assets and Accept the request by Doctor");
+        test = extent.createTest("Initiate asset , Request Accept , Revoke", "Initiate asset , Request Accept , Revoke");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }
@@ -31,7 +30,7 @@ public class AssetTransferInitiatedRequestAccept
     @Test(priority = 3)
     public void assetTransferRevoke()
     {
-        AssetTransferInitiatedRevoke initrevoke = new AssetTransferInitiatedRevoke(test);
+        AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
         initrevoke.testRevokeAsset();
 
     }

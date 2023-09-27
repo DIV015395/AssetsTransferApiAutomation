@@ -14,12 +14,12 @@ public class AssetRequestRejectTryEdit
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("I.T Asset Inventory Listing", "I.T side asset inventory Listing");
+        test = extent.createTest("Initiate asset , Request Reject , Edit , Revoke", "Initiate asset , Request Reject , Edit , Revoke");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }
     @Test(priority = 2)
-    public void RequestAccept()
+    public void requestReject()
     {
         AssetRequestReject assetrequestreject = new AssetRequestReject(test);
         assetrequestreject.testAssetRequestReject();
@@ -33,7 +33,8 @@ public class AssetRequestRejectTryEdit
     @AfterTest
     public void assetTransferRevoke()
     {
-        AssetTransferInitiatedRevoke initrevoke = new AssetTransferInitiatedRevoke(test);
+        AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
         initrevoke.testRevokeAsset();
+        extent.flush();
     }
 }

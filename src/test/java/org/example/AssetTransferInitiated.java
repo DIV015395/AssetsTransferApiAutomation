@@ -109,7 +109,7 @@ public class AssetTransferInitiated {
         System.out.println("Response Message: " + responseMessage);
         test.log(Status.INFO, "Post Request for Asset Initiation");
         test.log(Status.INFO, "Response Time in Seconds: " + responseTimeInSeconds);
-
+        test.log(Status.INFO,"Response Message : "+responseMessage);
 
 // Conditionally handle different status codes
         if (statusCode == 200) {

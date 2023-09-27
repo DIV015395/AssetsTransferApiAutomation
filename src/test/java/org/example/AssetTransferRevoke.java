@@ -2,15 +2,16 @@
 
 package org.example;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Test;
-public class AssetTransferInitiatedRevoke {
+
+public class AssetTransferRevoke {
 
     public ExtentTest test;
-    public AssetTransferInitiatedRevoke(ExtentTest test)
+    public AssetTransferRevoke(ExtentTest test)
     {
         this.test = test;
     }
@@ -38,21 +39,27 @@ public class AssetTransferInitiatedRevoke {
         double responseTimeInSeconds = responseTime / 1000.0;
 
         System.out.println("Response Time in Seconds: " + responseTimeInSeconds);
-// Optionally, you can also print the response message
         String responseMessage = response.getBody().asString();
         System.out.println("Response Message: " + responseMessage);
 
-
+        test.log(Status.INFO, "Post Request for Asset Transfer Revoke");
+        test.log(Status.INFO, "Response Time in Seconds: " + responseTimeInSeconds);
+        test.log(Status.INFO,"Response Message : "+responseMessage);
         if (statusCode == 200) {
             // Handle case when status code is 200 (initiated)
             System.out.println("Assets Transfer Revoke");
-        } else if (statusCode == 404) {
-            // Handle case when status code is 404 (server-side issue)
+            test.pass("Asset Transfer Revoke successful "+statusCode);
+        }
+        else if (statusCode == 404)
+        {
+            test.fail("Asset Transfer Revoke failed"+statusCode);
             System.out.println("There no assets for Revoke");
         } else {
             // Handle other status codes as needed
             System.out.println("Unknown Status Code: " + statusCode);
+            test.fail("Asset Transfer Revoke failed"+statusCode);
         }
+        test.log(Status.INFO, responseMessage);
     }
 }
 

@@ -28,9 +28,10 @@ public class AssetInventoryListing {
 
         int statusCode = response.getStatusCode();
         long responseTime = response.time();
+        String responseMessage = response.getBody().asString();
 // Optionally, you can convert the response time to seconds
         double responseTimeInSeconds = responseTime / 1000.0;
-
+        test.log(Status.INFO, "Get Request for Asset Inventory Listing");
         System.out.println("Response Time in Seconds: " + responseTimeInSeconds);
         test.log(Status.INFO, "Response Time in Seconds: " + responseTimeInSeconds);
 
@@ -65,6 +66,6 @@ public class AssetInventoryListing {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        test.log(Status.INFO, responseMessage);
     }
 }

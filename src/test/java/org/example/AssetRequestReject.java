@@ -1,5 +1,6 @@
 package org.example;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -89,10 +90,21 @@ public class AssetRequestReject
 // Optionally, you can convert the response time to seconds
         double responseTimeInSeconds = responseTime / 1000.0;
 
+        test.log(Status.INFO, "Post Request for asset request Reject");
+        test.log(Status.INFO, "Response Time in Seconds: " + responseTimeInSeconds);
         System.out.println("Response Time in Seconds: " + responseTimeInSeconds);
 // Optionally, you can also print the response message
         String responseMessage = response.getBody().asString();
         System.out.println("Response Message: " + responseMessage);
+        test.log(Status.INFO, "Response Message: " + responseMessage);
+        if(statusCode ==200)
+        {
+            test.pass("Asset Request Reject by doctor with status code "+statusCode);
+        }
+        else
+        {
+            test.fail("Asset Request Reject not working "+statusCode);
+        }
     }
 }
 

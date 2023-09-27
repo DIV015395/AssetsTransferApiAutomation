@@ -14,9 +14,10 @@ public class DoctorSideAssetListingTest {
     public void testStatusCodeReponseBody()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("I.T Asset Inventory Listing", "I.T side asset inventory Listing");
+        test = extent.createTest("Doctor Assets Listing", "Doctor Assets Listing");
         DoctorSideAssetListing list = new DoctorSideAssetListing(test);
         list.testDoctorSideAssetListing();
+        extent.flush();
 
     }
 }

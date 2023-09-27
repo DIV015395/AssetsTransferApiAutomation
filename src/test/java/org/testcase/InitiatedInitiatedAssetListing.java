@@ -3,7 +3,7 @@ package org.testcase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.example.AssetTransferInitiated;
-import org.example.AssetTransferInitiatedRevoke;
+import org.example.AssetTransferRevoke;
 import org.example.ExtentManager;
 import org.example.InitiatedAssetListing;
 import org.testng.annotations.AfterTest;
@@ -16,7 +16,7 @@ public class InitiatedInitiatedAssetListing {
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("I.T Asset Inventory Listing", "I.T side asset inventory Listing");
+        test = extent.createTest("Intiate by I.T and Initiate assets listing on doctor side", "Initiated by I.T and  Request Recieve By Doctor");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }
@@ -27,10 +27,11 @@ public class InitiatedInitiatedAssetListing {
         assetlisting.testGetInitiatedAssets();
 
     }
-    @AfterTest
+    @Test(priority = 3)
     public void assetTransferRevoke()
     {
-        AssetTransferInitiatedRevoke initrevoke = new AssetTransferInitiatedRevoke(test);
+        AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
         initrevoke.testRevokeAsset();
+        extent.flush();
     }
 }
