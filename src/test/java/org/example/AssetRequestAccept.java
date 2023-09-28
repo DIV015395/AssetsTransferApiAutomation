@@ -3,11 +3,13 @@ package org.example;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.gherkin.model.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class AssetRequestAccept
@@ -86,6 +88,9 @@ public class AssetRequestAccept
                 .post("http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081/asset/accept-reject");
 
         int statusCode = response.getStatusCode();
+
+        Assert.assertEquals(statusCode,200);
+
         long responseTime = response.time();
 // Optionally, you can convert the response time to seconds
         double responseTimeInSeconds = responseTime / 1000.0;

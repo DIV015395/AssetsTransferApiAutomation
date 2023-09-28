@@ -2,39 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetRequestAcceptTryEdit.java">
-        <classes>
-            <class name="org.testcase.AssetRequestAcceptTryEdit">
-                <methods>
-                    <include name="assetTransferInitiated"/>
-                    <include name="RequestAccept"/>
-                    <include name="assetRequestEdit"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetRequestRejectTryEdit.java">
-        <classes>
-            <class name="org.testcase.AssetRequestRejectTryEdit">
-                <methods>
-                    <include name="assetTransferInitiated"/>
-                    <include name="RequestAccept"/>
-                    <include name="assetRequestEdit"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetTransferInitiatedRequestAccept.java">
-        <classes>
-            <class name="org.testcase.AssetTransferInitiatedRequestAccept">
-                <methods>
-                    <include name="assetTransferInitiated"/>
-                    <include name="RequestAccept"/>
-                </methods>
-            </class>
-        </classes>
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/testng.xml">
+        <classes/>
     </test>
     <test verbose="2" preserve-order="true"
           name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetInventoryListingTest.java">
@@ -47,12 +16,59 @@
         </classes>
     </test>
     <test verbose="2" preserve-order="true"
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetRequestAcceptTryEdit.java">
+        <classes>
+            <class name="org.testcase.AssetRequestAcceptTryEdit">
+                <methods>
+                    <include name="assetTransferInitiated"/>
+                    <include name="RequestAccept"/>
+                    <include name="assetRequestEdit"/>
+                    <include name="assetTransferRevoke"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetRequestRejectTryEdit.java">
+        <classes>
+            <class name="org.testcase.AssetRequestRejectTryEdit">
+                <methods>
+                    <include name="assetTransferInitiated"/>
+                    <include name="requestReject"/>
+                    <include name="assetRequestEdit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetTransferInitiatedRequestAccept.java">
+        <classes>
+            <class name="org.testcase.AssetTransferInitiatedRequestAccept">
+                <methods>
+                    <include name="assetTransferInitiated"/>
+                    <include name="RequestAccept"/>
+                    <include name="assetTransferRevoke"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
           name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetTransferInitiatedRequestReject.java">
         <classes>
             <class name="org.testcase.AssetTransferInitiatedRequestReject">
                 <methods>
                     <include name="assetTransferInitiated"/>
-                    <include name="RequestAccept"/>
+                    <include name="requestReject"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/DoctorSideAssetListingTest.java">
+        <classes>
+            <class name="org.testcase.DoctorSideAssetListingTest">
+                <methods>
+                    <include name="testStatusCodeReponseBody"/>
                 </methods>
             </class>
         </classes>
@@ -62,7 +78,9 @@
         <classes>
             <class name="org.testcase.InitiatedEditRevoke">
                 <methods>
-                    <include name="initiatedEditRevoke"/>
+                    <include name="assetTransferInitiated"/>
+                    <include name="assetTransferEdit"/>
+                    <include name="assetTransferRevoke"/>
                 </methods>
             </class>
         </classes>
@@ -72,7 +90,9 @@
         <classes>
             <class name="org.testcase.InitiatedInitiatedAssetListing">
                 <methods>
-                    <include name="assetTrasnferInitiatedInitiatedAssetListing"/>
+                    <include name="assetTransferInitiated"/>
+                    <include name="initiatedAssetListing"/>
+                    <include name="assetTransferRevoke"/>
                 </methods>
             </class>
         </classes>
