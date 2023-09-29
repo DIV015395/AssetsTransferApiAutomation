@@ -10,7 +10,6 @@ public class CustomTestListener implements ISuiteListener {
     @Override
     public void onFinish(ISuite suite) {
         // This method is executed after the suite finishes running
-        EmailSenders.sendReport(); // Call the email sending method
     }
 }
 
