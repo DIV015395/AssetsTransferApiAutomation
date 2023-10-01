@@ -44,7 +44,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 29, 2023 06:59:14 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 1, 2023 10:25:34 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -102,7 +102,7 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -125,15 +125,943 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Initiate asset , Request Accept , Revoke</span>
-						<span class='test-time'>Sep 29, 2023 06:59:14 PM</span>
+						<span class='test-name'>I.T Asset Inventory Listing</span>
+						<span class='test-time'>Oct 1, 2023 10:25:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 29, 2023 06:59:14 PM</span>
-	<span class='label end-time'>Sep 29, 2023 06:59:31 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+173ms</span>
+	<span class='label start-time'>Oct 1, 2023 10:25:34 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:25:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+499ms</span>
+</div>
+<div class='test-desc'>I.T side asset inventory Listing </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:43 PM</td>
+				<td class='step-details'>
+						Get Request for Asset Inventory Listing
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:43 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 8.439
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:25:43 PM</td>
+				<td class='step-details'>
+						Inventory Listing working fine with Status code : 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:43 PM</td>
+				<td class='step-details'>
+						JSON Response Body : {
+  "content" : [ {
+    "id" : 1,
+    "code" : "DEIOS00018",
+    "serial" : "BG2303100042",
+    "qrCode" : "DEIOS00018",
+    "name" : "Scanner",
+    "model" : "Medit I-600",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : "IT_DR",
+    "transferState" : "Revoked",
+    "isVerified" : 0,
+    "isIncidence" : 0,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 1,
+      "name" : "Wand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 2,
+      "name" : "Calibrator",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 3,
+      "name" : "Stand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 4,
+      "name" : "Type C to C cable",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 5,
+      "name" : "SCANNING TIPS",
+      "code" : null,
+      "type" : "Fixture",
+      "quantity" : 5,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 7,
+    "code" : "DEIOS00026",
+    "serial" : "BG2303100079",
+    "qrCode" : "DEIOS00026",
+    "name" : "Scanner",
+    "model" : "Medit I-600",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : "IT_DR",
+    "transferState" : "Revoked",
+    "isVerified" : 0,
+    "isIncidence" : 0,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 1,
+      "name" : "Wand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 2,
+      "name" : "Calibrator",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 3,
+      "name" : "Stand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 4,
+      "name" : "Type C to C cable",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 5,
+      "name" : "SCANNING TIPS",
+      "code" : null,
+      "type" : "Fixture",
+      "quantity" : 5,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 5,
+    "code" : "DEIOS00024",
+    "serial" : "BG2303100178",
+    "qrCode" : "DEIOS00024",
+    "name" : "Scanner",
+    "model" : "Medit I-600",
+    "state" : "Issued",
+    "status" : "Working",
+    "transferType" : "DR_IT",
+    "transferState" : "Revoked",
+    "isVerified" : 0,
+    "isIncidence" : 0,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : "2023-09-29 07:13:46",
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 1,
+      "name" : "Wand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 2,
+      "name" : "Calibrator",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 3,
+      "name" : "Stand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 4,
+      "name" : "Type C to C cable",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 5,
+      "name" : "SCANNING TIPS",
+      "code" : null,
+      "type" : "Fixture",
+      "quantity" : 2,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 15,
+    "code" : "DEIOS00022",
+    "serial" : "BG2303100042",
+    "qrCode" : "DEIOS00022",
+    "name" : "Scanner",
+    "model" : "Medit I-600",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : "IT_DR",
+    "transferState" : "Revoked",
+    "isVerified" : 0,
+    "isIncidence" : 1,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 1,
+      "name" : "Wand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 2,
+      "name" : "Calibrator",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 3,
+      "name" : "Stand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 4,
+      "name" : "Type C to C cable",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 5,
+      "name" : "SCANNING TIPS",
+      "code" : null,
+      "type" : "Fixture",
+      "quantity" : 5,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 4,
+    "code" : "IHLTS00010",
+    "serial" : "SXC2RY2FV4F",
+    "qrCode" : "IHLTS00010",
+    "name" : "Laptop",
+    "model" : "16\" Macbook Pro",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : "IT_DR",
+    "transferState" : "Revoked",
+    "isVerified" : 0,
+    "isIncidence" : 0,
+    "type" : "IT",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 6,
+      "name" : "Laptop",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 7,
+      "name" : "Charger",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 17,
+    "code" : "DEIOS00025",
+    "serial" : "BG2303100042",
+    "qrCode" : "DEIOS00025",
+    "name" : "Scanner",
+    "model" : "Medit I-600",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : "IT_DR",
+    "transferState" : "Revoked",
+    "isVerified" : 0,
+    "isIncidence" : 0,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 1,
+      "name" : "Wand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 2,
+      "name" : "Calibrator",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 3,
+      "name" : "Stand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 4,
+      "name" : "Type C to C cable",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 5,
+      "name" : "SCANNING TIPS",
+      "code" : null,
+      "type" : "Fixture",
+      "quantity" : 5,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 12,
+    "code" : "IHLTS00013",
+    "serial" : "BG2303100042",
+    "qrCode" : "IHLTS00013",
+    "name" : "Laptop",
+    "model" : "16\" Macbook Pro",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : null,
+    "transferState" : null,
+    "isVerified" : null,
+    "isIncidence" : 0,
+    "type" : "IT",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 6,
+      "name" : "Laptop",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 7,
+      "name" : "Charger",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 13,
+    "code" : "DEIOS00023",
+    "serial" : "BG2303100042",
+    "qrCode" : "DEIOS00023",
+    "name" : "Scanner",
+    "model" : "Medit I-600",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : null,
+    "transferState" : null,
+    "isVerified" : null,
+    "isIncidence" : 0,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 1,
+      "name" : "Wand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 2,
+      "name" : "Calibrator",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 3,
+      "name" : "Stand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 4,
+      "name" : "Type C to C cable",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 5,
+      "name" : "SCANNING TIPS",
+      "code" : null,
+      "type" : "Fixture",
+      "quantity" : 5,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 3,
+    "code" : "DEIOS00020",
+    "serial" : "BG2303100006",
+    "qrCode" : "DEIOS00020",
+    "name" : "Scanner",
+    "model" : "Medit I-600",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : null,
+    "transferState" : null,
+    "isVerified" : null,
+    "isIncidence" : 0,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 1,
+      "name" : "Wand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 2,
+      "name" : "Calibrator",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 3,
+      "name" : "Stand",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 4,
+      "name" : "Type C to C cable",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 5,
+      "name" : "SCANNING TIPS",
+      "code" : null,
+      "type" : "Fixture",
+      "quantity" : 1,
+      "status" : "InUse"
+    } ]
+  }, {
+    "id" : 6,
+    "code" : "IHLTS00009",
+    "serial" : "SK9WQRX39W2",
+    "qrCode" : "IHLTS00009",
+    "name" : "Laptop",
+    "model" : "16\" Macbook Pro",
+    "state" : "Inventory",
+    "status" : "Working",
+    "transferType" : null,
+    "transferState" : null,
+    "isVerified" : null,
+    "isIncidence" : 0,
+    "type" : "CLINICAL",
+    "initUser" : null,
+    "issuedUser" : null,
+    "issuedDate" : null,
+    "commissionedDate" : null,
+    "createdDate" : "2023-09-05 00:00:00",
+    "categoryId" : 1,
+    "accessories" : [ {
+      "id" : 6,
+      "name" : "Laptop",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    }, {
+      "id" : 7,
+      "name" : "Charger",
+      "code" : null,
+      "type" : "Essential",
+      "quantity" : 1,
+      "status" : "InUse"
+    } ]
+  } ],
+  "pageable" : {
+    "sort" : {
+      "sorted" : false,
+      "empty" : true,
+      "unsorted" : true
+    },
+    "pageNumber" : 0,
+    "pageSize" : 10,
+    "offset" : 0,
+    "paged" : true,
+    "unpaged" : false
+  },
+  "totalPages" : 2,
+  "totalElements" : 14,
+  "last" : false,
+  "size" : 10,
+  "number" : 0,
+  "sort" : {
+    "sorted" : false,
+    "empty" : true,
+    "unsorted" : true
+  },
+  "numberOfElements" : 10,
+  "first" : true,
+  "empty" : false
+}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:43 PM</td>
+				<td class='step-details'>
+						{"content":[{"id":1,"code":"DEIOS00018","serial":"BG2303100042","qrCode":"DEIOS00018","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":7,"code":"DEIOS00026","serial":"BG2303100079","qrCode":"DEIOS00026","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":5,"code":"DEIOS00024","serial":"BG2303100178","qrCode":"DEIOS00024","name":"Scanner","model":"Medit I-600","state":"Issued","status":"Working","transferType":"DR_IT","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":"2023-09-29 07:13:46","commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":2,"status":"InUse"}]},{"id":15,"code":"DEIOS00022","serial":"BG2303100042","qrCode":"DEIOS00022","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":1,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":4,"code":"IHLTS00010","serial":"SXC2RY2FV4F","qrCode":"IHLTS00010","name":"Laptop","model":"16\" Macbook Pro","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"IT","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":6,"name":"Laptop","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":7,"name":"Charger","code":null,"type":"Essential","quantity":1,"status":"InUse"}]},{"id":17,"code":"DEIOS00025","serial":"BG2303100042","qrCode":"DEIOS00025","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":12,"code":"IHLTS00013","serial":"BG2303100042","qrCode":"IHLTS00013","name":"Laptop","model":"16\" Macbook Pro","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"IT","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":6,"name":"Laptop","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":7,"name":"Charger","code":null,"type":"Essential","quantity":1,"status":"InUse"}]},{"id":13,"code":"DEIOS00023","serial":"BG2303100042","qrCode":"DEIOS00023","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":3,"code":"DEIOS00020","serial":"BG2303100006","qrCode":"DEIOS00020","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":1,"status":"InUse"}]},{"id":6,"code":"IHLTS00009","serial":"SK9WQRX39W2","qrCode":"IHLTS00009","name":"Laptop","model":"16\" Macbook Pro","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":6,"name":"Laptop","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":7,"name":"Charger","code":null,"type":"Essential","quantity":1,"status":"InUse"}]}],"pageable":{"sort":{"sorted":false,"empty":true,"unsorted":true},"pageNumber":0,"pageSize":10,"offset":0,"paged":true,"unpaged":false},"totalPages":2,"totalElements":14,"last":false,"size":10,"number":0,"sort":{"sorted":false,"empty":true,"unsorted":true},"numberOfElements":10,"first":true,"empty":false}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:25:43 PM</td>
+				<td class='step-details'>
+						Test case passed successfully.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Initiate asset , Rquest Accept , Edit , Revoke</span>
+						<span class='test-time'>Oct 1, 2023 10:25:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 1, 2023 10:25:43 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:26:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+682ms</span>
+</div>
+<div class='test-desc'>Initiate asset , Rquest Accept , Edit , Revok </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:54 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Initiation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:54 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 10.709
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:54 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Transfer initiated successfully for AssetId(s): [1]","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:25:54 PM</td>
+				<td class='step-details'>
+						Asset initiated with Status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:58 PM</td>
+				<td class='step-details'>
+						Post Request for asset request accept
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:58 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 3.871
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:25:58 PM</td>
+				<td class='step-details'>
+						Response Message: {"message":"Asset transfer accepted successfully!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:25:58 PM</td>
+				<td class='step-details'>
+						Asset Request accept by doctor with status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:06 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Edit
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:06 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 5.702
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:06 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset 1 transfer details updated successfully!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:06 PM</td>
+				<td class='step-details'>
+						Asset Transfer Edit Successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:07 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Revoke
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:07 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 1.071
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:07 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:07 PM</td>
+				<td class='step-details'>
+						Asset Transfer Revoke successful 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:07 PM</td>
+				<td class='step-details'>
+						{"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Initiate asset , Request Reject , Edit , Revoke</span>
+						<span class='test-time'>Oct 1, 2023 10:26:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 1, 2023 10:26:07 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:26:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+398ms</span>
+</div>
+<div class='test-desc'>Initiate asset , Request Reject , Edit , Revoke </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:19 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Initiation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:19 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 11.349
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:19 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Transfer initiated successfully for AssetId(s): [1]","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:19 PM</td>
+				<td class='step-details'>
+						Asset initiated with Status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:22 PM</td>
+				<td class='step-details'>
+						Post Request for asset request Reject
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:22 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 3.89
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:22 PM</td>
+				<td class='step-details'>
+						Response Message: {"message":"Asset Transfer Rejected!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:22 PM</td>
+				<td class='step-details'>
+						Asset Request Reject by doctor with status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:30 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Edit
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:30 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 5.712
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:30 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset 1 transfer details updated successfully!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:30 PM</td>
+				<td class='step-details'>
+						Asset Transfer Edit Successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:32 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Revoke
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:32 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 1.071
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:32 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:32 PM</td>
+				<td class='step-details'>
+						Asset Transfer Revoke successful 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:32 PM</td>
+				<td class='step-details'>
+						{"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Initiate asset , Request Accept , Revoke</span>
+						<span class='test-time'>Oct 1, 2023 10:26:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 1, 2023 10:26:32 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:26:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+765ms</span>
 </div>
 <div class='test-desc'>Initiate asset , Request Accept , Revoke </div>
 <div class='test-steps'>
@@ -148,7 +1076,7 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>6:59:27 PM</td>
+				<td class='timestamp'>10:26:42 PM</td>
 				<td class='step-details'>
 						Post Request for Asset Initiation
 					
@@ -156,15 +1084,15 @@
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>6:59:27 PM</td>
+				<td class='timestamp'>10:26:42 PM</td>
 				<td class='step-details'>
-						Response Time in Seconds: 12.042
+						Response Time in Seconds: 10.841
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>6:59:27 PM</td>
+				<td class='timestamp'>10:26:42 PM</td>
 				<td class='step-details'>
 						Response Message : {"message":"Transfer initiated successfully for AssetId(s): [1]","status":200}
 					
@@ -172,7 +1100,7 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>6:59:27 PM</td>
+				<td class='timestamp'>10:26:42 PM</td>
 				<td class='step-details'>
 						Asset initiated with Status code 200
 					
@@ -180,7 +1108,7 @@
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>6:59:31 PM</td>
+				<td class='timestamp'>10:26:46 PM</td>
 				<td class='step-details'>
 						Post Request for asset request accept
 					
@@ -188,15 +1116,15 @@
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>6:59:31 PM</td>
+				<td class='timestamp'>10:26:46 PM</td>
 				<td class='step-details'>
-						Response Time in Seconds: 4.064
+						Response Time in Seconds: 3.681
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>6:59:31 PM</td>
+				<td class='timestamp'>10:26:46 PM</td>
 				<td class='step-details'>
 						Response Message: {"message":"Asset transfer accepted successfully!","status":200}
 					
@@ -204,9 +1132,505 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>6:59:31 PM</td>
+				<td class='timestamp'>10:26:46 PM</td>
 				<td class='step-details'>
 						Asset Request accept by doctor with status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:47 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Revoke
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:47 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 1.172
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:47 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:47 PM</td>
+				<td class='step-details'>
+						Asset Transfer Revoke successful 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:47 PM</td>
+				<td class='step-details'>
+						{"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Assets Initiated and Request Reject and Asset Transfer Revoke</span>
+						<span class='test-time'>Oct 1, 2023 10:26:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 1, 2023 10:26:47 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:27:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+171ms</span>
+</div>
+<div class='test-desc'>I.T initiated the asset and Accept by Doctor and Reject by I.T and Revoke by I.T </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:58 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Initiation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:58 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 10.613
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:26:58 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Transfer initiated successfully for AssetId(s): [1]","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:58 PM</td>
+				<td class='step-details'>
+						Asset initiated with Status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:02 PM</td>
+				<td class='step-details'>
+						Post Request for asset request Reject
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:02 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 4.306
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:02 PM</td>
+				<td class='step-details'>
+						Response Message: {"message":"Asset Transfer Rejected!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:02 PM</td>
+				<td class='step-details'>
+						Asset Request Reject by doctor with status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:04 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Revoke
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:04 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 1.219
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:04 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:04 PM</td>
+				<td class='step-details'>
+						Asset Transfer Revoke successful 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:04 PM</td>
+				<td class='step-details'>
+						{"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Doctor Assets Listing</span>
+						<span class='test-time'>Oct 1, 2023 10:27:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 1, 2023 10:27:04 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:27:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+458ms</span>
+</div>
+<div class='test-desc'>Doctor Assets Listing </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:05 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Revoke
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:05 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 1.438
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:05 PM</td>
+				<td class='step-details'>
+						Response Message : {"content":[{"id":9,"code":"DEIOS00021","serial":"BG2303100046","qrCode":"DEIOS00021","name":"Scanner","model":"Medit I-600","state":"Issued","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":{"id":12,"username":"jai.banipark1","fname":"Jaipur Bani","mname":"","lname":"Park","nickname":"BPark1-J","assetUserTypeId":2,"userType":null,"uid":null},"issuedDate":"2023-09-29 08:17:16","commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]}],"pageable":{"sort":{"sorted":false,"empty":true,"unsorted":true},"pageNumber":0,"pageSize":10,"offset":0,"paged":true,"unpaged":false},"totalPages":1,"totalElements":1,"last":true,"size":10,"number":0,"sort":{"sorted":false,"empty":true,"unsorted":true},"numberOfElements":1,"first":true,"empty":false}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:05 PM</td>
+				<td class='step-details'>
+						Doctor Assets Listing With Status code 200
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Initiate , Edit , Revoke all action by I.T</span>
+						<span class='test-time'>Oct 1, 2023 10:27:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 1, 2023 10:27:05 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:27:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+503ms</span>
+</div>
+<div class='test-desc'>Initiate , Edit , Revoke all action by I.T </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:16 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Initiation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:16 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 10.546
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:16 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Transfer initiated successfully for AssetId(s): [1]","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:16 PM</td>
+				<td class='step-details'>
+						Asset initiated with Status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:23 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Edit
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:23 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 5.626
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:23 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset 1 transfer details updated successfully!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:23 PM</td>
+				<td class='step-details'>
+						Asset Transfer Edit Successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:25 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Revoke
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:25 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 1.186
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:25 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:25 PM</td>
+				<td class='step-details'>
+						Asset Transfer Revoke successful 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:25 PM</td>
+				<td class='step-details'>
+						{"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Intiate by I.T and Initiate assets listing on doctor side</span>
+						<span class='test-time'>Oct 1, 2023 10:27:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 1, 2023 10:27:25 PM</span>
+	<span class='label end-time'>Oct 1, 2023 10:27:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+744ms</span>
+</div>
+<div class='test-desc'>Initiated by I.T and  Request Recieve By Doctor </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:35 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Initiation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:35 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 10.521
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:35 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Transfer initiated successfully for AssetId(s): [1]","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:35 PM</td>
+				<td class='step-details'>
+						Asset initiated with Status code 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:39 PM</td>
+				<td class='step-details'>
+						Get Request for Initiate Asset Listing
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:39 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 3.359
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:39 PM</td>
+				<td class='step-details'>
+						Response Message : {"content":[{"assetId":1,"name":"Scanner","serial":"BG2303100042","code":"DEIOS00018","qrCode":"DEIOS00018","model":"Medit I-600","senderName":"Jaipur Malviya Nagar","issuedUserId":null,"issuedAssetUser":"","initUserId":null,"initUserName":null,"initUserType":null,"categoryId":1,"category":"IT","transferType":"IT_DR","transferStatus":"Working","assetTransId":null,"transferState":"Initiated","senderRemark":"15-09-23 testing android","receiverRemark":null,"transferDate":"2023-10-01 16:57:29","createdDate":"2023-09-05 00:00:00","accessories":[{"accessoryId":1,"name":"Wand","quantity":1,"type":"Essential","senderQty":1,"receiverQty":0,"currentQty":null},{"accessoryId":2,"name":"Calibrator","quantity":1,"type":"Essential","senderQty":1,"receiverQty":0,"currentQty":null},{"accessoryId":3,"name":"Stand","quantity":1,"type":"Essential","senderQty":1,"receiverQty":0,"currentQty":null},{"accessoryId":4,"name":"Type C to C cable","quantity":1,"type":"Essential","senderQty":1,"receiverQty":0,"currentQty":null},{"accessoryId":5,"name":"SCANNING TIPS","quantity":5,"type":"Fixture","senderQty":5,"receiverQty":0,"currentQty":null}],"images":[{"userType":"Sender","thumbUrl":"S3 URL","imageUrl":"image URL"}]}],"status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:39 PM</td>
+				<td class='step-details'>
+						Initiate assets listing Successful with status code : 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:40 PM</td>
+				<td class='step-details'>
+						Post Request for Asset Transfer Revoke
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:40 PM</td>
+				<td class='step-details'>
+						Response Time in Seconds: 1.249
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:40 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Asset successfully revoked!","status":200}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:40 PM</td>
+				<td class='step-details'>
+						Asset Transfer Revoke successful 200
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:27:40 PM</td>
+				<td class='step-details'>
+						{"message":"Asset successfully revoked!","status":200}
 					
 				</td>
 			</tr>
@@ -243,7 +1667,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -255,19 +1679,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 29, 2023 06:59:14 PM</div>
+					<div class='panel-lead'>Oct 1, 2023 10:25:34 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 29, 2023 06:59:31 PM</div>
+			 		<div class='panel-lead'>Oct 1, 2023 10:27:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 17s+285ms</div>
+					<div class='panel-lead'>0h 2m 6s+923ms</div>
 				</div>
 			</div>
 		</div>
@@ -278,8 +1702,8 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
+                parentCount: 8,
+				passParent: 8,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -310,7 +1734,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Initiate asset , Request Accept , Revoke":17.173
+			        "I.T Asset Inventory Listing":9.499,"Initiate asset , Rquest Accept , Edit , Revoke":23.682,"Initiate asset , Request Reject , Edit , Revoke":24.398,"Initiate asset , Request Accept , Revoke":15.765,"Assets Initiated and Request Reject and Asset Transfer Revoke":16.171,"Doctor Assets Listing":1.458,"Initiate , Edit , Revoke all action by I.T":19.503,"Intiate by I.T and Initiate assets listing on doctor side":15.744
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
