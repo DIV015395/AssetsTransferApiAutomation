@@ -17,19 +17,21 @@ public class AssetInventoryListing {
     {
         this.test = test;
     }
-
-    public void testInventoryListing() {
+    String baseUrl = "http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081";
+    String endpoint = "/asset/inventory";
+    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    public void testInventoryListing()
+    {
         // Send a GET request with the authorization header
         Response response = RestAssured.given()
                 .header("x-authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6eyJpZCI6MTQsImZuYW1lIjoiSmFpcHVyIE1hbHZpeWEiLCJsbmFtZSI6Ik5hZ2FyIiwiZW1haWwiOiJiaGF2bmEuc2luZGh3YW5pQGluc3RhbnRzeXMuY29tIiwidXNlclR5cGUiOiJJVCIsImlzTWZhIjoxLCJ0ZW5hbnRzIjp7IjEiOiJRQSIsIjIiOiJERVYiLCIzIjoiVUFUMSJ9LCJhY3RpdmVUZW5hbnQiOjN9LCJwcml2aWxlZ2VzIjpbInIuYSJdLCJzdWIiOiJqYWkubWFsdml5YW5hZ2FyMSIsImF1ZCI6Im4vYSIsInJvbGVzIjpudWxsfQ.1Doi2HwsnfwzTbK6sli45vUYqV5SL6QFF2oh_inCkdU")
                 .contentType(ContentType.JSON)
                 .when()
-                .get("http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081/asset/inventory"); // Replace with your API endpoint
+                .get(fullUrl); // Replace with your API endpoint
 
         int statusCode = response.getStatusCode();
         long responseTime = response.time();
         String responseMessage = response.getBody().asString();
-// Optionally, you can convert the response time to seconds
         double responseTimeInSeconds = responseTime / 1000.0;
         test.log(Status.INFO, "Get Request for Asset Inventory Listing");
         System.out.println("Response Time in Seconds: " + responseTimeInSeconds);
@@ -63,7 +65,8 @@ public class AssetInventoryListing {
             System.out.println(prettyJson);
             test.log(Status.INFO, "JSON Response Body : "+prettyJson);
 
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
         }
         test.log(Status.INFO, responseMessage);
