@@ -8,8 +8,14 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+import java.util.ResourceBundle;
+
 //Login with jai.malviyanagar1 = token
 public class AssetInventoryListing {
+
+
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("logintoken");
+    String ITUser = resourceBundle.getString("IT");
 
 
     public ExtentTest test;
@@ -24,7 +30,7 @@ public class AssetInventoryListing {
     {
         // Send a GET request with the authorization header
         Response response = RestAssured.given()
-                .header("x-authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6eyJpZCI6MTQsImZuYW1lIjoiSmFpcHVyIE1hbHZpeWEiLCJsbmFtZSI6Ik5hZ2FyIiwiZW1haWwiOiJiaGF2bmEuc2luZGh3YW5pQGluc3RhbnRzeXMuY29tIiwidXNlclR5cGUiOiJJVCIsImlzTWZhIjoxLCJ0ZW5hbnRzIjp7IjEiOiJRQSIsIjIiOiJERVYiLCIzIjoiVUFUMSJ9LCJhY3RpdmVUZW5hbnQiOjN9LCJwcml2aWxlZ2VzIjpbInIuYSJdLCJzdWIiOiJqYWkubWFsdml5YW5hZ2FyMSIsImF1ZCI6Im4vYSIsInJvbGVzIjpudWxsfQ.1Doi2HwsnfwzTbK6sli45vUYqV5SL6QFF2oh_inCkdU")
+                .header("x-authorization", ITUser)
                 .contentType(ContentType.JSON)
                 .when()
                 .get(fullUrl); // Replace with your API endpoint
