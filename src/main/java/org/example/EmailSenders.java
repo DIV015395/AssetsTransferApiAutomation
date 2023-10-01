@@ -6,7 +6,7 @@ import javax.mail.internet.*;
 import java.io.File;
 
 public class EmailSenders {
-    public static void main(String[] args) {
+    public static void emailSender() {
         // Set up properties for the email server (Gmail SMTP)
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.gmail.com");
