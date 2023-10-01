@@ -22,7 +22,7 @@ public class EmailSenders {
         String recipientEmail = "sharmaboymanjeet12@gmail.com";
 
         // Specify the full path to the Extent Report file
-        String reportFilePath = "C:\\Users\\ManjeetSharma\\Downloads\\AssetsTransferApiAutomation\\extent-report.htmex";
+        String reportFilePath = "C:\\Users\\ManjeetSharma\\Downloads\\AssetsTransferApiAutomation\\extent-report.html";
 
         try {
             // Create a session with your credentials
