@@ -27,11 +27,4 @@ public class InitiatedInitiatedAssetListing {
         assetlisting.testGetInitiatedAssets();
 
     }
-    @Test(priority = 3)
-    public void assetTransferRevoke()
-    {
-        AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
-        initrevoke.testRevokeAsset();
-        extent.flush();
-    }
 }

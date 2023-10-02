@@ -12,8 +12,18 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
 
+import java.util.ResourceBundle;
+
 public class InitiatedAssetListing
 {
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("baseurl");
+    String baseUrl = resourceBundle.getString("baseUrl");
+    String endpoint = "/asset/initiated-assets";
+    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    ResourceBundle resourceBundleLoginToken = ResourceBundle.getBundle("logintoken");
+    String doctorUser = resourceBundleLoginToken.getString("Doctor");
+
+
     public ExtentTest test;
     public InitiatedAssetListing(ExtentTest test)
     {
@@ -24,9 +34,9 @@ public class InitiatedAssetListing
 
         // Send a GET request with the "x-authorization" token
         Response response = RestAssured.given()
-                .header("x-authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6eyJpZCI6MTIsImZuYW1lIjoiSmFpcHVyIEJhbmkiLCJsbmFtZSI6IlBhcmsiLCJlbWFpbCI6IiIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaXNNZmEiOjEsInRlbmFudHMiOnsiMSI6IlFBIiwiMiI6IkRFViIsIjMiOiJVQVQxIn0sImFjdGl2ZVRlbmFudCI6M30sInByaXZpbGVnZXMiOlsici5hIl0sInN1YiI6ImphaS5iYW5pcGFyazEiLCJhdWQiOiJuL2EiLCJyb2xlcyI6bnVsbH0.sHwzVxAWIxSNxfVw_nMSWxd1cHutvNUomfZ-9BzXTj4") // Replace with your actual token
+                .header("x-authorization", doctorUser) // Replace with your actual token
                 .when()
-                .get("http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081/asset/initiated-assets");
+                .get(fullUrl);
 
         int statusCode = response.getStatusCode();
         long responseTime = response.time();

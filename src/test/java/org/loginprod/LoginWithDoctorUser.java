@@ -17,6 +17,7 @@ public class LoginWithDoctorUser {
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("userid");
     String Doctoruser = resourceBundle.getString("Doctor");
+    String Password = resourceBundle.getString("Password");
     String jwtToken;
     @Test(priority = 1)
     public void signInTest() {
@@ -26,7 +27,7 @@ public class LoginWithDoctorUser {
         // Create a JSON object for the request body
         JSONObject requestBody = new JSONObject()
                 .put("username", Doctoruser)
-                .put("password", "Uatadmin@prm23");
+                .put("password", Password);
 
         // Send a POST request and capture the response
         Response response = (Response) RestAssured.given()
