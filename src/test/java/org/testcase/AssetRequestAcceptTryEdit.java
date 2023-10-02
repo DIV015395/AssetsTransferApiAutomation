@@ -14,7 +14,7 @@ public class AssetRequestAcceptTryEdit
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Initiate asset , Rquest Accept , Edit , Revoke", "Initiate asset , Rquest Accept , Edit , Revok");
+        test = extent.createTest("Initiate asset => Rquest Accept => Revoke", "Transfer Initiated by I.T user, \nAccept By Doctor ,\nRevoke by I.T user");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }
@@ -23,12 +23,6 @@ public class AssetRequestAcceptTryEdit
     {
         AssetRequestAccept assetrequestaccept = new AssetRequestAccept(test);
         assetrequestaccept.testAssetRequestAccept();
-    }
-    @Test(priority = 3)
-    public void assetRequestEdit()
-    {
-        AssetTransferEdit initedit =  new AssetTransferEdit(test);
-        initedit.assetTransferEdit();
     }
     @Test(priority = 4)
     public void assetTransferRevoke()

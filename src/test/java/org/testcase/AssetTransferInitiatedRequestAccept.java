@@ -6,6 +6,7 @@ import org.example.AssetRequestAccept;
 import org.example.AssetTransferInitiated;
 import org.example.AssetTransferRevoke;
 import org.example.ExtentManager;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class AssetTransferInitiatedRequestAccept
@@ -16,7 +17,7 @@ public class AssetTransferInitiatedRequestAccept
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Initiate asset , Request Accept , Revoke", "Initiate asset , Request Accept , Revoke");
+        test = extent.createTest("Initiate asset => Request Accept", "Transfer Initiated by I.T user, \nAccepted By Doctor");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }
@@ -27,11 +28,10 @@ public class AssetTransferInitiatedRequestAccept
         assetrequestaccept.testAssetRequestAccept();
         extent.flush();
     }
-    @Test(priority = 3)
+    @AfterTest
     public void assetTransferRevoke()
     {
         AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
         initrevoke.testRevokeAsset();
     }
-
 }

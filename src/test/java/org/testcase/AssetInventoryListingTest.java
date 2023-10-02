@@ -12,7 +12,7 @@ public class AssetInventoryListingTest {
     public ExtentReports extent;
     public ExtentTest test;
     @Test
-    public void testStatusCodeReponseBody()
+    public void assetInventoryListing()
     {
         extent = ExtentManager.getInstance();
         test = extent.createTest("I.T Asset Inventory Listing", "I.T side asset inventory Listing");

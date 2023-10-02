@@ -15,7 +15,7 @@ public class AssetTransferInitiatedRequestReject
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Assets Initiated and Request Reject and Asset Transfer Revoke ", "I.T initiated the asset and Accept by Doctor and Reject by I.T and Revoke by I.T");
+        test = extent.createTest("Initiate asset => Request Rejected", "Transfer Initiated by I.T user, \nRejected By Doctor");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }
@@ -24,13 +24,14 @@ public class AssetTransferInitiatedRequestReject
     {
         AssetRequestReject assetrequestreject = new AssetRequestReject(test);
         assetrequestreject.testAssetRequestReject();
+        extent.flush();
     }
+
     @AfterTest
     public void assetTransferRevoke()
     {
         AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
         initrevoke.testRevokeAsset();
-        extent.flush();
     }
 
 }

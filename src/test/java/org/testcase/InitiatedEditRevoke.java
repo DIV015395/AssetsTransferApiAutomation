@@ -16,7 +16,7 @@ public class InitiatedEditRevoke {
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Initiate , Edit , Revoke all action by I.T ", "Initiate , Edit , Revoke all action by I.T");
+        test = extent.createTest("Initiate => Edit => Revoke ", "Transfer Initiated by I.T user, \nEdit By I.T User ,\nRevoke by I.T user");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }

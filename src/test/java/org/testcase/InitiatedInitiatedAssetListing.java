@@ -16,7 +16,7 @@ public class InitiatedInitiatedAssetListing {
     public void assetTransferInitiated()
     {
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Intiate by I.T and Initiate assets listing on doctor side", "Initiated by I.T and  Request Recieve By Doctor");
+        test = extent.createTest("Initiated => Intiated Asset Request", "Initiated by I.T user,\n  Asset Request List Doctor Side");
         AssetTransferInitiated initiate =  new AssetTransferInitiated(test);
         initiate.testAssetTransfer();
     }
@@ -25,6 +25,12 @@ public class InitiatedInitiatedAssetListing {
     {
         InitiatedAssetListing assetlisting = new InitiatedAssetListing(test);
         assetlisting.testGetInitiatedAssets();
-
+        extent.flush();
+    }
+    @AfterTest
+    public void assetTransferRevoke()
+    {
+        AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
+        initrevoke.testRevokeAsset();
     }
 }
