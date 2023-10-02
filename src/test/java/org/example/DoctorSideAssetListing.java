@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-//Login with jai.banipark1 as Doctor
 public class DoctorSideAssetListing {
 
     public ExtentTest test;

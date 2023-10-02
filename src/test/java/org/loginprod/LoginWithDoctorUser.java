@@ -6,6 +6,7 @@ import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
+import javax.print.Doc;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,6 +14,9 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class LoginWithDoctorUser {
+
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("userid");
+    String Doctoruser = resourceBundle.getString("Doctor");
     String jwtToken;
     @Test(priority = 1)
     public void signInTest() {
@@ -21,7 +25,7 @@ public class LoginWithDoctorUser {
 
         // Create a JSON object for the request body
         JSONObject requestBody = new JSONObject()
-                .put("username", "jai.banipark1")
+                .put("username", Doctoruser)
                 .put("password", "Uatadmin@prm23");
 
         // Send a POST request and capture the response

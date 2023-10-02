@@ -14,6 +14,8 @@ import java.util.ResourceBundle;
 
 public class LoginWithItUser {
 
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("userid");
+    String Ituser = resourceBundle.getString("IT");
 
     String jwtToken;
     @Test(priority = 1)
@@ -23,7 +25,7 @@ public class LoginWithItUser {
 
         // Create a JSON object for the request body
         JSONObject requestBody = new JSONObject()
-                .put("username", "jai.malviyanagar1")
+                .put("username", Ituser)
                 .put("password", "Uatadmin@prm23");
 
         // Send a POST request and capture the response
