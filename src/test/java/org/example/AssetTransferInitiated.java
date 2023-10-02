@@ -10,7 +10,18 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
+import java.util.ResourceBundle;
+
 public class AssetTransferInitiated {
+
+
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("baseurl");
+    String baseUrl = resourceBundle.getString("baseUrl");
+    String endpoint = "/asset/init-transfer";
+    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    ResourceBundle resourceBundleLoginToken = ResourceBundle.getBundle("logintoken");
+    String Ituser = resourceBundleLoginToken.getString("IT");
+
     public ExtentTest test;
     public AssetTransferInitiated(ExtentTest test)
     {
@@ -91,11 +102,11 @@ public class AssetTransferInitiated {
 
         // Send a POST request with the JSON object as the request body
         Response response = RestAssured.given()
-                .header("x-authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6eyJpZCI6MTQsImZuYW1lIjoiSmFpcHVyIE1hbHZpeWEiLCJsbmFtZSI6Ik5hZ2FyIiwiZW1haWwiOiJiaGF2bmEuc2luZGh3YW5pQGluc3RhbnRzeXMuY29tIiwidXNlclR5cGUiOiJJVCIsImlzTWZhIjoxLCJ0ZW5hbnRzIjp7IjEiOiJRQSIsIjIiOiJERVYiLCIzIjoiVUFUMSJ9LCJhY3RpdmVUZW5hbnQiOjN9LCJwcml2aWxlZ2VzIjpbInIuYSJdLCJzdWIiOiJqYWkubWFsdml5YW5hZ2FyMSIsImF1ZCI6Im4vYSIsInJvbGVzIjpudWxsfQ.1Doi2HwsnfwzTbK6sli45vUYqV5SL6QFF2oh_inCkdU")
+                .header("x-authorization",Ituser)
                 .contentType(ContentType.JSON)
                 .body(requestBody.toString()) // Convert the JSON object to a string
                 .when()
-                .post("http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081/asset/init-transfer");
+                .post(fullUrl);
 
         int statusCode = response.getStatusCode();
         long responseTime = response.time();

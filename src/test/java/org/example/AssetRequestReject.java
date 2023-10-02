@@ -8,8 +8,19 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
 
+import java.util.ResourceBundle;
+
 public class AssetRequestReject
 {
+
+
+
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("baseurl");
+    String baseUrl = resourceBundle.getString("baseUrl");
+    String endpoint = "/asset/accept-reject";
+    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    ResourceBundle resourceBundleLoginToken = ResourceBundle.getBundle("logintoken");
+    String doctorUser = resourceBundleLoginToken.getString("Doctor");
 
     public ExtentTest test;
     public AssetRequestReject(ExtentTest test)
@@ -78,11 +89,11 @@ public class AssetRequestReject
 
         // Send a POST request with the JSON object as the request body
         Response response = RestAssured.given()
-                .header("x-authorization", "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySW5mbyI6eyJpZCI6MTIsImZuYW1lIjoiSmFpcHVyIEJhbmkiLCJsbmFtZSI6IlBhcmsiLCJlbWFpbCI6IiIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaXNNZmEiOjEsInRlbmFudHMiOnsiMSI6IlFBIiwiMiI6IkRFViIsIjMiOiJVQVQxIn0sImFjdGl2ZVRlbmFudCI6M30sInByaXZpbGVnZXMiOlsici5hIl0sInN1YiI6ImphaS5iYW5pcGFyazEiLCJhdWQiOiJuL2EiLCJyb2xlcyI6bnVsbH0.sHwzVxAWIxSNxfVw_nMSWxd1cHutvNUomfZ-9BzXTj4")
+                .header("x-authorization", doctorUser)
                 .contentType(ContentType.JSON)
                 .body(requestBody.toString()) // Convert the JSON object to a string
                 .when()
-                .post("http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081/asset/accept-reject");
+                .post(baseUrl);
 
         // Perform assertions on the response as needed
         int statusCode = response.getStatusCode();

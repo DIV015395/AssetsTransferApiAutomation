@@ -44,7 +44,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 2, 2023 12:39:54 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 2, 2023 01:26:57 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -125,17 +125,17 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>I.T Asset Inventory Listing</span>
-						<span class='test-time'>Oct 2, 2023 12:39:54 AM</span>
+						<span class='test-name'>Initiate asset , Request Accept , Revoke</span>
+						<span class='test-time'>Oct 2, 2023 01:26:57 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 2, 2023 12:39:54 AM</span>
-	<span class='label end-time'>Oct 2, 2023 12:40:06 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+465ms</span>
+	<span class='label start-time'>Oct 2, 2023 01:26:57 PM</span>
+	<span class='label end-time'>Oct 2, 2023 01:27:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+853ms</span>
 </div>
-<div class='test-desc'>I.T side asset inventory Listing </div>
+<div class='test-desc'>Initiate asset , Request Accept , Revoke </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
 		<thead>
@@ -148,573 +148,65 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>12:40:05 AM</td>
+				<td class='timestamp'>1:27:11 PM</td>
 				<td class='step-details'>
-						Get Request for Asset Inventory Listing
+						Post Request for Asset Initiation
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>12:40:05 AM</td>
+				<td class='timestamp'>1:27:11 PM</td>
 				<td class='step-details'>
-						Response Time in Seconds: 9.865
+						Response Time in Seconds: 12.521
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:27:11 PM</td>
+				<td class='step-details'>
+						Response Message : {"message":"Transfer initiated successfully for AssetId(s): [1]","status":200}
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>12:40:05 AM</td>
+				<td class='timestamp'>1:27:11 PM</td>
 				<td class='step-details'>
-						Inventory Listing working fine with Status code : 200
+						Asset initiated with Status code 200
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>12:40:06 AM</td>
+				<td class='timestamp'>1:27:15 PM</td>
 				<td class='step-details'>
-						JSON Response Body : {
-  "content" : [ {
-    "id" : 1,
-    "code" : "DEIOS00018",
-    "serial" : "BG2303100042",
-    "qrCode" : "DEIOS00018",
-    "name" : "Scanner",
-    "model" : "Medit I-600",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : "IT_DR",
-    "transferState" : "Revoked",
-    "isVerified" : 0,
-    "isIncidence" : 0,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 1,
-      "name" : "Wand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 2,
-      "name" : "Calibrator",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 3,
-      "name" : "Stand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 4,
-      "name" : "Type C to C cable",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 5,
-      "name" : "SCANNING TIPS",
-      "code" : null,
-      "type" : "Fixture",
-      "quantity" : 5,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 7,
-    "code" : "DEIOS00026",
-    "serial" : "BG2303100079",
-    "qrCode" : "DEIOS00026",
-    "name" : "Scanner",
-    "model" : "Medit I-600",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : "IT_DR",
-    "transferState" : "Revoked",
-    "isVerified" : 0,
-    "isIncidence" : 0,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 1,
-      "name" : "Wand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 2,
-      "name" : "Calibrator",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 3,
-      "name" : "Stand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 4,
-      "name" : "Type C to C cable",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 5,
-      "name" : "SCANNING TIPS",
-      "code" : null,
-      "type" : "Fixture",
-      "quantity" : 5,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 5,
-    "code" : "DEIOS00024",
-    "serial" : "BG2303100178",
-    "qrCode" : "DEIOS00024",
-    "name" : "Scanner",
-    "model" : "Medit I-600",
-    "state" : "Issued",
-    "status" : "Working",
-    "transferType" : "DR_IT",
-    "transferState" : "Revoked",
-    "isVerified" : 0,
-    "isIncidence" : 0,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : "2023-09-29 07:13:46",
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 1,
-      "name" : "Wand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 2,
-      "name" : "Calibrator",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 3,
-      "name" : "Stand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 4,
-      "name" : "Type C to C cable",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 5,
-      "name" : "SCANNING TIPS",
-      "code" : null,
-      "type" : "Fixture",
-      "quantity" : 2,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 15,
-    "code" : "DEIOS00022",
-    "serial" : "BG2303100042",
-    "qrCode" : "DEIOS00022",
-    "name" : "Scanner",
-    "model" : "Medit I-600",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : "IT_DR",
-    "transferState" : "Revoked",
-    "isVerified" : 0,
-    "isIncidence" : 1,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 1,
-      "name" : "Wand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 2,
-      "name" : "Calibrator",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 3,
-      "name" : "Stand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 4,
-      "name" : "Type C to C cable",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 5,
-      "name" : "SCANNING TIPS",
-      "code" : null,
-      "type" : "Fixture",
-      "quantity" : 5,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 4,
-    "code" : "IHLTS00010",
-    "serial" : "SXC2RY2FV4F",
-    "qrCode" : "IHLTS00010",
-    "name" : "Laptop",
-    "model" : "16\" Macbook Pro",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : "IT_DR",
-    "transferState" : "Revoked",
-    "isVerified" : 0,
-    "isIncidence" : 0,
-    "type" : "IT",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 6,
-      "name" : "Laptop",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 7,
-      "name" : "Charger",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 17,
-    "code" : "DEIOS00025",
-    "serial" : "BG2303100042",
-    "qrCode" : "DEIOS00025",
-    "name" : "Scanner",
-    "model" : "Medit I-600",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : "IT_DR",
-    "transferState" : "Revoked",
-    "isVerified" : 0,
-    "isIncidence" : 0,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 1,
-      "name" : "Wand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 2,
-      "name" : "Calibrator",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 3,
-      "name" : "Stand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 4,
-      "name" : "Type C to C cable",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 5,
-      "name" : "SCANNING TIPS",
-      "code" : null,
-      "type" : "Fixture",
-      "quantity" : 5,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 12,
-    "code" : "IHLTS00013",
-    "serial" : "BG2303100042",
-    "qrCode" : "IHLTS00013",
-    "name" : "Laptop",
-    "model" : "16\" Macbook Pro",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : null,
-    "transferState" : null,
-    "isVerified" : null,
-    "isIncidence" : 0,
-    "type" : "IT",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 6,
-      "name" : "Laptop",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 7,
-      "name" : "Charger",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 13,
-    "code" : "DEIOS00023",
-    "serial" : "BG2303100042",
-    "qrCode" : "DEIOS00023",
-    "name" : "Scanner",
-    "model" : "Medit I-600",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : null,
-    "transferState" : null,
-    "isVerified" : null,
-    "isIncidence" : 0,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 1,
-      "name" : "Wand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 2,
-      "name" : "Calibrator",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 3,
-      "name" : "Stand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 4,
-      "name" : "Type C to C cable",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 5,
-      "name" : "SCANNING TIPS",
-      "code" : null,
-      "type" : "Fixture",
-      "quantity" : 5,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 3,
-    "code" : "DEIOS00020",
-    "serial" : "BG2303100006",
-    "qrCode" : "DEIOS00020",
-    "name" : "Scanner",
-    "model" : "Medit I-600",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : null,
-    "transferState" : null,
-    "isVerified" : null,
-    "isIncidence" : 0,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 1,
-      "name" : "Wand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 2,
-      "name" : "Calibrator",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 3,
-      "name" : "Stand",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 4,
-      "name" : "Type C to C cable",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 5,
-      "name" : "SCANNING TIPS",
-      "code" : null,
-      "type" : "Fixture",
-      "quantity" : 1,
-      "status" : "InUse"
-    } ]
-  }, {
-    "id" : 6,
-    "code" : "IHLTS00009",
-    "serial" : "SK9WQRX39W2",
-    "qrCode" : "IHLTS00009",
-    "name" : "Laptop",
-    "model" : "16\" Macbook Pro",
-    "state" : "Inventory",
-    "status" : "Working",
-    "transferType" : null,
-    "transferState" : null,
-    "isVerified" : null,
-    "isIncidence" : 0,
-    "type" : "CLINICAL",
-    "initUser" : null,
-    "issuedUser" : null,
-    "issuedDate" : null,
-    "commissionedDate" : null,
-    "createdDate" : "2023-09-05 00:00:00",
-    "categoryId" : 1,
-    "accessories" : [ {
-      "id" : 6,
-      "name" : "Laptop",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    }, {
-      "id" : 7,
-      "name" : "Charger",
-      "code" : null,
-      "type" : "Essential",
-      "quantity" : 1,
-      "status" : "InUse"
-    } ]
-  } ],
-  "pageable" : {
-    "sort" : {
-      "sorted" : false,
-      "empty" : true,
-      "unsorted" : true
-    },
-    "pageNumber" : 0,
-    "pageSize" : 10,
-    "offset" : 0,
-    "paged" : true,
-    "unpaged" : false
-  },
-  "totalPages" : 2,
-  "totalElements" : 14,
-  "last" : false,
-  "size" : 10,
-  "number" : 0,
-  "sort" : {
-    "sorted" : false,
-    "empty" : true,
-    "unsorted" : true
-  },
-  "numberOfElements" : 10,
-  "first" : true,
-  "empty" : false
-}
+						Post Request for asset request accept
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>12:40:06 AM</td>
+				<td class='timestamp'>1:27:15 PM</td>
 				<td class='step-details'>
-						{"content":[{"id":1,"code":"DEIOS00018","serial":"BG2303100042","qrCode":"DEIOS00018","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":7,"code":"DEIOS00026","serial":"BG2303100079","qrCode":"DEIOS00026","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":5,"code":"DEIOS00024","serial":"BG2303100178","qrCode":"DEIOS00024","name":"Scanner","model":"Medit I-600","state":"Issued","status":"Working","transferType":"DR_IT","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":"2023-09-29 07:13:46","commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":2,"status":"InUse"}]},{"id":15,"code":"DEIOS00022","serial":"BG2303100042","qrCode":"DEIOS00022","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":1,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":4,"code":"IHLTS00010","serial":"SXC2RY2FV4F","qrCode":"IHLTS00010","name":"Laptop","model":"16\" Macbook Pro","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"IT","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":6,"name":"Laptop","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":7,"name":"Charger","code":null,"type":"Essential","quantity":1,"status":"InUse"}]},{"id":17,"code":"DEIOS00025","serial":"BG2303100042","qrCode":"DEIOS00025","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":"IT_DR","transferState":"Revoked","isVerified":0,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":12,"code":"IHLTS00013","serial":"BG2303100042","qrCode":"IHLTS00013","name":"Laptop","model":"16\" Macbook Pro","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"IT","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":6,"name":"Laptop","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":7,"name":"Charger","code":null,"type":"Essential","quantity":1,"status":"InUse"}]},{"id":13,"code":"DEIOS00023","serial":"BG2303100042","qrCode":"DEIOS00023","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":5,"status":"InUse"}]},{"id":3,"code":"DEIOS00020","serial":"BG2303100006","qrCode":"DEIOS00020","name":"Scanner","model":"Medit I-600","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":1,"name":"Wand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":2,"name":"Calibrator","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":3,"name":"Stand","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":4,"name":"Type C to C cable","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":5,"name":"SCANNING TIPS","code":null,"type":"Fixture","quantity":1,"status":"InUse"}]},{"id":6,"code":"IHLTS00009","serial":"SK9WQRX39W2","qrCode":"IHLTS00009","name":"Laptop","model":"16\" Macbook Pro","state":"Inventory","status":"Working","transferType":null,"transferState":null,"isVerified":null,"isIncidence":0,"type":"CLINICAL","initUser":null,"issuedUser":null,"issuedDate":null,"commissionedDate":null,"createdDate":"2023-09-05 00:00:00","categoryId":1,"accessories":[{"id":6,"name":"Laptop","code":null,"type":"Essential","quantity":1,"status":"InUse"},{"id":7,"name":"Charger","code":null,"type":"Essential","quantity":1,"status":"InUse"}]}],"pageable":{"sort":{"sorted":false,"empty":true,"unsorted":true},"pageNumber":0,"pageSize":10,"offset":0,"paged":true,"unpaged":false},"totalPages":2,"totalElements":14,"last":false,"size":10,"number":0,"sort":{"sorted":false,"empty":true,"unsorted":true},"numberOfElements":10,"first":true,"empty":false}
+						Response Time in Seconds: 4.297
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:27:15 PM</td>
+				<td class='step-details'>
+						Response Message: {"message":"Asset transfer accepted successfully!","status":200}
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>12:40:06 AM</td>
+				<td class='timestamp'>1:27:15 PM</td>
 				<td class='step-details'>
-						Test case passed successfully.
+						Asset Request accept by doctor with status code 200
 					
 				</td>
 			</tr>
@@ -763,19 +255,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 2, 2023 12:39:54 AM</div>
+					<div class='panel-lead'>Oct 2, 2023 01:26:57 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 2, 2023 12:40:06 AM</div>
+			 		<div class='panel-lead'>Oct 2, 2023 01:27:15 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 11s+595ms</div>
+					<div class='panel-lead'>0h 0m 17s+948ms</div>
 				</div>
 			</div>
 		</div>
@@ -818,7 +310,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "I.T Asset Inventory Listing":11.465
+			        "Initiate asset , Request Accept , Revoke":17.853
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

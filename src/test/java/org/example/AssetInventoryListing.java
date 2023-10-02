@@ -16,8 +16,6 @@ public class AssetInventoryListing {
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("logintoken");
     String ITUser = resourceBundle.getString("IT");
-
-
     public ExtentTest test;
     public AssetInventoryListing(ExtentTest test)
     {
@@ -33,7 +31,7 @@ public class AssetInventoryListing {
                 .header("x-authorization", ITUser)
                 .contentType(ContentType.JSON)
                 .when()
-                .get(fullUrl); // Replace with your API endpoint
+                .get(fullUrl);
 
         int statusCode = response.getStatusCode();
         long responseTime = response.time();
@@ -52,12 +50,8 @@ public class AssetInventoryListing {
         {
             System.out.println("Not Working with Status code : "+statusCode);
             test.fail("Not Working with Status code : "+statusCode);
-
         }
-
         String jsonResponse = response.getBody().asString();
-//
-        // Create an ObjectMapper with pretty-printing enabled
         ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
 
         try {

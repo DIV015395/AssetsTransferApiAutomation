@@ -32,7 +32,6 @@ public class AssetTransferInitiatedRequestAccept
     {
         AssetTransferRevoke initrevoke = new AssetTransferRevoke(test);
         initrevoke.testRevokeAsset();
-
     }
 
 }
