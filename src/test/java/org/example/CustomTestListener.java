@@ -10,8 +10,7 @@ public class CustomTestListener implements ISuiteListener {
     @Override
     public void onFinish(ISuite suite) {
         EmailSenders.emailSenderToManjeetSharma();
-        EmailSenders.emailSenderToRajeshMishra();
-        EmailSenders.emailSenderToVikasSood();
+//        EmailSenders.emailSenderToRajeshMishra();
     }
 }
 

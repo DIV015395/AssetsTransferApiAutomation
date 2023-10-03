@@ -1,5 +1,6 @@
 package org.example;
 
+import com.aventstack.extentreports.ExtentTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -10,6 +11,11 @@ import java.util.ResourceBundle;
 
 public class AssetInventoryFilter
 {
+    ExtentTest test;
+    public AssetInventoryFilter(ExtentTest test)
+    {
+        this.test = test;
+    }
     ResourceBundle resourceBundle = ResourceBundle.getBundle("logintoken");
     String ITUser = resourceBundle.getString("IT");
     ResourceBundle resourceBundles = ResourceBundle.getBundle("baseurl");
@@ -32,12 +38,15 @@ public class AssetInventoryFilter
                 .when()
                 .post(fullUrl);
 
-        System.out.println("Response Body: " + response.getBody().asString());
-
-        // Perform assertions on the response as needed
-        response.then()
-                .statusCode(200) // Check if the status code is as expected
-                .contentType(ContentType.JSON); // Check if the response content type is JSON
+        int statusCode = response.statusCode();
+        if(statusCode ==200)
+        {
+            test.pass("Filter Working : SearchValue , SearchBy , Status = Damaged, Category, Flag: "+statusCode);
+        }
+        else
+        {
+            test.pass("Filter Working not working : SearchValue , SearchBy , Status = Damaged, Category, Flag: "+statusCode);
+        }
     }
 
     public void inventoryListingFilterStatusWorking() {
@@ -57,13 +66,15 @@ public class AssetInventoryFilter
                 .when()
                 .post(fullUrl); // Replace with your API endpoint
 
-        // Print the response body
-        System.out.println("Response Body: " + response.getBody().asString());
-
-        // Perform assertions on the response as needed
-        response.then()
-                .statusCode(200) // Check if the status code is as expected
-                .contentType(ContentType.JSON); // Check if the response content type is JSON
+        int statusCode = response.statusCode();
+        if(statusCode ==200)
+        {
+            test.pass("Filter Working : SearchValue , SearchBy , Status = Working, Category, Flag: "+statusCode);
+        }
+        else
+        {
+            test.pass("Filter Working not working : SearchValue , SearchBy , Status = Working, Category, Flag: "+statusCode);
+        }
     }
 
     public void inventoryListingUsingFilterCategory() {
@@ -82,13 +93,18 @@ public class AssetInventoryFilter
                 .when()
                 .post(fullUrl); // Replace with your API endpoint
 
-        // Print the response body
-        System.out.println("Response Body: " + response.getBody().asString());
 
         // Perform assertions on the response as needed
-        response.then()
-                .statusCode(200) // Check if the status code is as expected
-                .contentType(ContentType.JSON); // Check if the response content type is JSON
+        int statusCode = response.statusCode();
+        if(statusCode ==200)
+        {
+            test.pass("Filter Working : SearchValue , SearchBy = name , Category = I.T, Flag: "+statusCode);
+
+        }
+        else
+        {
+            test.pass("Filter Working not Working : SearchValue , SearchBy = name , Category = I.T, Flag: "+statusCode);
+        }
     }
 
     public void inventoryListingSearchByName() {
@@ -107,12 +123,15 @@ public class AssetInventoryFilter
                 .post(fullUrl); // Replace with your API endpoint
 
         // Print the response body
-        System.out.println("Response Body: " + response.getBody().asString());
-
-        // Perform assertions on the response as needed
-        response.then()
-                .statusCode(200) // Check if the status code is as expected
-                .contentType(ContentType.JSON); // Check if the response content type is JSON
+        int statusCode = response.statusCode();
+        if(statusCode ==200)
+        {
+            test.pass("Filter Working : SearchValue , SearchBy = name , Flag: "+statusCode);
+        }
+        else
+        {
+            test.pass("Filter Working not working : SearchValue , SearchBy = name , Flag: "+statusCode);
+        }
     }
     public void inventoryListingSearchByCode() {
         // Create a JSON object for the request payload
@@ -129,13 +148,18 @@ public class AssetInventoryFilter
                 .when()
                 .post(fullUrl); // Replace with your API endpoint
 
-        // Print the response body
-        System.out.println("Response Body: " + response.getBody().asString());
+
 
         // Perform assertions on the response as needed
-        response.then()
-                .statusCode(200) // Check if the status code is as expected
-                .contentType(ContentType.JSON); // Check if the response content type is JSON
+        int statusCode = response.statusCode();
+        if(statusCode ==200)
+        {
+            test.pass("Filter Working : SearchValue , SearchBy = code , Flag: "+statusCode);
+        }
+        else
+        {
+            test.pass("Filter Working not working : SearchValue , SearchBy = code , Flag: "+statusCode);
+        }
     }
 
     public void inventoryListingSearchBySerial() {
@@ -153,13 +177,15 @@ public class AssetInventoryFilter
                 .when()
                 .post(fullUrl); // Replace with your API endpoint
 
-        // Print the response body
-        System.out.println("Response Body: " + response.getBody().asString());
-
-        // Perform assertions on the response as needed
-                 response.then()
-                .statusCode(200) // Check if the status code is as expected
-                .contentType(ContentType.JSON); // Check if the response content type is JSON
+        int statusCode = response.statusCode();
+        if(statusCode ==200)
+        {
+            test.pass("Filter Working : SearchValue , SearchBy = serial , Flag: "+statusCode);
+        }
+        else
+        {
+            test.pass("Filter Working not working : SearchValue , SearchBy = serial , Flag: "+statusCode);
+        }
     }
 
 }

@@ -32,7 +32,7 @@ public class AssetRequestReject
         // Create a JSON object for the request body
         JSONObject requestBody = new JSONObject();
         requestBody.put("assetId", 1);
-        requestBody.put("status", "Working");
+        requestBody.put("status", "Damaged");
         requestBody.put("remark", "Rejected by banipark1 with API Automation Accessories Decrease");
         requestBody.put("action" , "Rejected");
 
@@ -41,49 +41,46 @@ public class AssetRequestReject
 
         JSONObject accessory1 = new JSONObject();
         accessory1.put("accessoryId", 1);
-        accessory1.put("quantity", 1);
+        accessory1.put("quantity", 9);
         accessory1.put("type", "Essential");
-        accessory1.put("senderQty", 1);
+        accessory1.put("senderQty", 9);
         accessoriesArray.put(accessory1);
 
         JSONObject accessory2 = new JSONObject();
         accessory2.put("accessoryId", 2);
-        accessory2.put("quantity", 1);
+        accessory2.put("quantity", 9);
         accessory2.put("type", "Essential");
-        accessory2.put("senderQty", 1);
+        accessory2.put("senderQty", 9);
         accessoriesArray.put(accessory2);
 
         JSONObject accessory3 = new JSONObject();
         accessory3.put("accessoryId", 3);
-        accessory3.put("quantity", 1);
+        accessory3.put("quantity", 9);
         accessory3.put("type", "Essential");
-        accessory3.put("senderQty", 1);
+        accessory3.put("senderQty", 9);
         accessoriesArray.put(accessory3);
 
         JSONObject accessory4 = new JSONObject();
         accessory4.put("accessoryId", 4);
-        accessory4.put("quantity", 1);
+        accessory4.put("quantity", 9);
         accessory4.put("type", "Essential");
-        accessory4.put("senderQty", 1);
+        accessory4.put("senderQty", 9);
         accessoriesArray.put(accessory4);
 
         JSONObject accessory5 = new JSONObject();
         accessory5.put("accessoryId", 5);
-        accessory5.put("quantity", 5);
+        accessory5.put("quantity", 45);
         accessory5.put("type", "Fixture");
-        accessory5.put("senderQty", 5);
+        accessory5.put("senderQty", 45);
         accessoriesArray.put(accessory5);
 
 
         requestBody.put("accessories", accessoriesArray);
-        // Create an array for images
         JSONArray imagesArray = new JSONArray();
-
         JSONObject image1 = new JSONObject();
         image1.put("thumbUrl", "Edit S3 URL");
         image1.put("imageUrl", "Edit image URL");
         imagesArray.put(image1);
-
         requestBody.put("images", imagesArray);
 
 

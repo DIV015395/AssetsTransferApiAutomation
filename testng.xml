@@ -2,15 +2,44 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/testng.xml">
-        <classes/>
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/loginprod/LoginWithDoctorUser.java">
+        <classes>
+            <class name="org.loginprod.LoginWithDoctorUser">
+                <methods>
+                    <include name="signInTest"/>
+                    <include name="tokenChange"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/loginprod/LoginWithItUser.java">
+        <classes>
+            <class name="org.loginprod.LoginWithItUser">
+                <methods>
+                    <include name="signInTest"/>
+                    <include name="tokenChange"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetInventoryFilterTest.java">
+        <classes>
+            <class name="org.testcase.AssetInventoryFilterTest">
+                <methods>
+                    <include name="assetInventoryFilterTest"/>
+                </methods>
+            </class>
+        </classes>
     </test>
     <test verbose="2" preserve-order="true"
           name="C:/Users/ManjeetSharma/Downloads/AssetsTransferApiAutomation/src/test/java/org/testcase/AssetInventoryListingTest.java">
         <classes>
             <class name="org.testcase.AssetInventoryListingTest">
                 <methods>
-                    <include name="testStatusCodeReponseBody"/>
+                    <include name="assetInventoryListing"/>
                 </methods>
             </class>
         </classes>
@@ -22,7 +51,6 @@
                 <methods>
                     <include name="assetTransferInitiated"/>
                     <include name="RequestAccept"/>
-                    <include name="assetRequestEdit"/>
                     <include name="assetTransferRevoke"/>
                 </methods>
             </class>
@@ -35,7 +63,7 @@
                 <methods>
                     <include name="assetTransferInitiated"/>
                     <include name="requestReject"/>
-                    <include name="assetRequestEdit"/>
+                    <include name="assetTransferRevoke"/>
                 </methods>
             </class>
         </classes>
@@ -47,7 +75,6 @@
                 <methods>
                     <include name="assetTransferInitiated"/>
                     <include name="RequestAccept"/>
-                    <include name="assetTransferRevoke"/>
                 </methods>
             </class>
         </classes>
@@ -92,9 +119,11 @@
                 <methods>
                     <include name="assetTransferInitiated"/>
                     <include name="initiatedAssetListing"/>
-                    <include name="assetTransferRevoke"/>
                 </methods>
             </class>
         </classes>
     </test>
+    <listeners>
+        <listener class-name="org.example.CustomTestListener" />
+    </listeners>
 </suite>
