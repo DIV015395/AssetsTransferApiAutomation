@@ -90,7 +90,7 @@ public class AssetRequestReject
                 .contentType(ContentType.JSON)
                 .body(requestBody.toString()) // Convert the JSON object to a string
                 .when()
-                .post(baseUrl);
+                .post(fullUrl);
 
         // Perform assertions on the response as needed
         int statusCode = response.getStatusCode();
