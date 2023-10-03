@@ -12,7 +12,7 @@ public class CustomTestListener implements ISuiteListener {
         EmailSenders.emailSenderToManjeetSharma();
         EmailSenders.emailSenderToCompanyManjeetSharma();
         EmailSenders.emailSenderToRajeshMishra();
-        EmailSenders.emailSenderToVikasSood();
+//        EmailSenders.emailSenderToVikasSood();
     }
 }
 
