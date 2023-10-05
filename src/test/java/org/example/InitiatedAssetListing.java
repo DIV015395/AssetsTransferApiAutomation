@@ -17,14 +17,14 @@ import java.util.ResourceBundle;
 public class InitiatedAssetListing
 {
     ResourceBundle resourceBundle = ResourceBundle.getBundle("baseurl");
-    String baseUrl = resourceBundle.getString("baseUrl");
-    String endpoint = "/asset/initiated-assets";
-    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    private String baseUrl = resourceBundle.getString("baseUrl");
+    private String endpoint = "/asset/initiated-assets";
+    private String fullUrl = String.format("%s%s", baseUrl, endpoint);
     ResourceBundle resourceBundleLoginToken = ResourceBundle.getBundle("logintoken");
-    String doctorUser = resourceBundleLoginToken.getString("Doctor");
+    private String doctorUser = resourceBundleLoginToken.getString("Doctor");
 
 
-    public ExtentTest test;
+    private ExtentTest test;
     public InitiatedAssetListing(ExtentTest test)
     {
         this.test = test;

@@ -12,15 +12,12 @@ import java.util.ResourceBundle;
 
 public class AssetTransferEdit {
     ResourceBundle resourceBundle = ResourceBundle.getBundle("logintoken");
-    String ITUser = resourceBundle.getString("IT");
-    String baseUrl = "http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081";
-    String endpoint = "/asset/edit-initiated-asset";
-    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    private String ITUser = resourceBundle.getString("IT");
+    private String baseUrl = "http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081";
+    private String endpoint = "/asset/edit-initiated-asset";
+    private String fullUrl = String.format("%s%s", baseUrl, endpoint);
 
-
-
-
-    public ExtentTest test;
+    private ExtentTest test;
     public AssetTransferEdit(ExtentTest test)
     {
         this.test = test;

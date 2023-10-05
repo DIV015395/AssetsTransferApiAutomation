@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 
 public class AssetInventoryFilterTest
 {
-  public ExtentReports extent;
-  public ExtentTest test;
+  private ExtentReports extent;
+  private ExtentTest test;
 @Test
   public void assetInventoryFilterTest()
   {

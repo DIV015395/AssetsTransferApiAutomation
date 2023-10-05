@@ -10,8 +10,8 @@ import org.example.ExtentManager;
 import org.testng.annotations.Test;
 
 public class InitiatedEditRevoke {
-    public ExtentReports extent;
-    public ExtentTest test;
+    private ExtentReports extent;
+    private ExtentTest test;
     @Test(priority = 1)
     public void assetTransferInitiated()
     {

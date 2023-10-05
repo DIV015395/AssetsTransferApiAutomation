@@ -16,13 +16,13 @@ public class AssetRequestReject
 
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("baseurl");
-    String baseUrl = resourceBundle.getString("baseUrl");
-    String endpoint = "/asset/accept-reject";
-    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    private String baseUrl = resourceBundle.getString("baseUrl");
+    private String endpoint = "/asset/accept-reject";
+    private String fullUrl = String.format("%s%s", baseUrl, endpoint);
     ResourceBundle resourceBundleLoginToken = ResourceBundle.getBundle("logintoken");
-    String doctorUser = resourceBundleLoginToken.getString("Doctor");
+    private String doctorUser = resourceBundleLoginToken.getString("Doctor");
 
-    public ExtentTest test;
+    private ExtentTest test;
     public AssetRequestReject(ExtentTest test)
     {
         this.test = test;

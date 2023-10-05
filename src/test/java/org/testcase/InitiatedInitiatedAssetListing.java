@@ -10,8 +10,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class InitiatedInitiatedAssetListing {
-    public ExtentReports extent;
-    public ExtentTest test;
+    private ExtentReports extent;
+    private ExtentTest test;
     @Test(priority = 1)
     public void assetTransferInitiated()
     {

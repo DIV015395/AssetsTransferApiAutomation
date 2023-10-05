@@ -16,13 +16,13 @@ public class AssetTransferInitiated {
 
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("baseurl");
-    String baseUrl = resourceBundle.getString("baseUrl");
-    String endpoint = "/asset/init-transfer";
-    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    private String baseUrl = resourceBundle.getString("baseUrl");
+    private String endpoint = "/asset/init-transfer";
+    private String fullUrl = String.format("%s%s", baseUrl, endpoint);
     ResourceBundle resourceBundleLoginToken = ResourceBundle.getBundle("logintoken");
-    String Ituser = resourceBundleLoginToken.getString("IT");
+    private String Ituser = resourceBundleLoginToken.getString("IT");
 
-    public ExtentTest test;
+    private ExtentTest test;
     public AssetTransferInitiated(ExtentTest test)
     {
         this.test = test;

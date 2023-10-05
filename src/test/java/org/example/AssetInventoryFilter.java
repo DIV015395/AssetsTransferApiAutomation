@@ -17,11 +17,11 @@ public class AssetInventoryFilter
         this.test = test;
     }
     ResourceBundle resourceBundle = ResourceBundle.getBundle("logintoken");
-    String ITUser = resourceBundle.getString("IT");
+    private String ITUser = resourceBundle.getString("IT");
     ResourceBundle resourceBundles = ResourceBundle.getBundle("baseurl");
-    String baseUrl = resourceBundles.getString("baseUrl");
-    String endpoint = "/asset/filter";
-    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    private String baseUrl = resourceBundles.getString("baseUrl");
+    private String endpoint = "/asset/filter";
+    private String fullUrl = String.format("%s%s", baseUrl, endpoint);
     public void inventoryListingFilterStatusDamaged()
     {
         JSONObject requestBody = new JSONObject();

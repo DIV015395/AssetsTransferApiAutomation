@@ -16,9 +16,9 @@ import java.util.ResourceBundle;
 public class LoginWithDoctorUser {
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("userid");
-    String Doctoruser = resourceBundle.getString("Doctor");
-    String Password = resourceBundle.getString("Password");
-    String jwtToken;
+    private String Doctoruser = resourceBundle.getString("Doctor");
+    private String Password = resourceBundle.getString("Password");
+    private String jwtToken;
     @Test(priority = 1)
     public void signInTest() {
         // Base URL of the API

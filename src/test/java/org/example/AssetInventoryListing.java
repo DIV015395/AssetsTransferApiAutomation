@@ -15,15 +15,15 @@ public class AssetInventoryListing {
 
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("logintoken");
-    String ITUser = resourceBundle.getString("IT");
-    public ExtentTest test;
+    private String ITUser = resourceBundle.getString("IT");
+    private ExtentTest test;
     public AssetInventoryListing(ExtentTest test)
     {
         this.test = test;
     }
-    String baseUrl = "http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081";
-    String endpoint = "/asset/inventory";
-    String fullUrl = String.format("%s%s", baseUrl, endpoint);
+    private String baseUrl = "http://ec2-43-205-70-111.ap-south-1.compute.amazonaws.com:8081";
+    private String endpoint = "/asset/inventory";
+    private String fullUrl = String.format("%s%s", baseUrl, endpoint);
     public void testInventoryListing()
     {
         // Send a GET request with the authorization header
