@@ -1,27 +1,20 @@
 package org.pojoclass;
 import com.fasterxml.jackson.annotation.JsonProperty;
-public class AuthRequest {
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+import java.util.ResourceBundle;
 
+public class AuthRequestForDoctor
+{
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("Doctorlogincredential");
+    // Accessing values
     @JsonProperty("username")
-    private String username;
-
+   private String username = resourceBundle.getString("username");
+    @JsonProperty("password")
+    private String password = resourceBundle.getString("password");
     public String getUsername() {
         return username;
     }
-
     public String getPassword() {
         return password;
     }
-
-    @JsonProperty("password")
-    private String password;
-
-    // Getters and setters
 }

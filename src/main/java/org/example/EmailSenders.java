@@ -6,7 +6,8 @@ import javax.mail.internet.*;
 import java.io.File;
 
 public class EmailSenders {
-    public static void emailSenderToManjeetSharma() {
+    public static void emailSenderToManjeetSharma()
+    {
         // Set up properties for the email server (Gmail SMTP)
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.gmail.com");
@@ -16,8 +17,6 @@ public class EmailSenders {
         properties.put("mail.smtp.socketFactory.port", "465");
         properties.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
         properties.put("mail.smtp.socketFactory.fallback", "false");
-
-
         // Replace with your actual email and password (securely stored)
         String senderEmail = "manjeet.instantsys@gmail.com";
         String senderPassword = "idmj elos fyqc zvix";

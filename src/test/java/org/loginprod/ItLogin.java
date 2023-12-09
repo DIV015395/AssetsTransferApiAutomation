@@ -1,11 +1,9 @@
-package org.testingpojo;
+package org.loginprod;
 
 import io.restassured.RestAssured;
 import org.example.EndPointFixed;
-import org.example.HeaderUtil;
-import org.pojoclass.AuthRequestForDoctor;
+import org.example.HeaderUtilFixed;
 import org.pojoclass.AuthRequestForIT;
-import org.pojoclass.DoctorJwtToken;
 import org.pojoclass.ItJwtToken;
 import org.testng.annotations.Test;
 
@@ -17,13 +15,13 @@ public class ItLogin
 {
     private String baseUrl;
     @Test()
-    public void testAuthentication()
+    public void testItAuthentication()
     {
         System.out.println(EndPointFixed.getAuthUrlsignin());
         AuthRequestForIT authRequestForIT = new AuthRequestForIT();
         authRequestForIT.getUsername();
         authRequestForIT.getPassword();
-        Map<String, Object> fixedHeaders = HeaderUtil.createFixedHeaders();
+        Map<String, Object> fixedHeaders = HeaderUtilFixed.createFixedHeaders();
         ItJwtToken itJwtToken = RestAssured.given()
                 .headers(fixedHeaders)
                 .contentType(JSON)

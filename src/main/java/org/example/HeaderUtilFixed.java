@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Map;
-public class HeaderUtil {
+public class HeaderUtilFixed {
 
     public static Map<String, Object> createFixedHeaders() {
         return Map.of(

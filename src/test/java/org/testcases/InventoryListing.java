@@ -1,2 +1,6 @@
-package org.testcases;public class InventoryListing {
+package org.testcases;
+
+public class InventoryListing {
+
+
 }
