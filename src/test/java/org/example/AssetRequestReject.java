@@ -6,22 +6,17 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.junit.Test;
 
 import java.util.ResourceBundle;
 
 public class AssetRequestReject
 {
-
-
-
     ResourceBundle resourceBundle = ResourceBundle.getBundle("baseurl");
     private String baseUrl = resourceBundle.getString("baseUrl");
     private String endpoint = "/asset/accept-reject";
     private String fullUrl = String.format("%s%s", baseUrl, endpoint);
     ResourceBundle resourceBundleLoginToken = ResourceBundle.getBundle("logintoken");
     private String doctorUser = resourceBundleLoginToken.getString("Doctor");
-
     private ExtentTest test;
     public AssetRequestReject(ExtentTest test)
     {
@@ -36,7 +31,6 @@ public class AssetRequestReject
         requestBody.put("remark", "Rejected by banipark1 with API Automation Accessories Decrease");
         requestBody.put("action" , "Rejected");
 
-        // Create an array for accessories
         JSONArray accessoriesArray = new JSONArray();
 
         JSONObject accessory1 = new JSONObject();
@@ -81,9 +75,8 @@ public class AssetRequestReject
         image1.put("thumbUrl", "Edit S3 URL");
         image1.put("imageUrl", "Edit image URL");
         imagesArray.put(image1);
+
         requestBody.put("images", imagesArray);
-
-
         // Send a POST request with the JSON object as the request body
         Response response = RestAssured.given()
                 .header("x-authorization", doctorUser)
@@ -91,7 +84,6 @@ public class AssetRequestReject
                 .body(requestBody.toString()) // Convert the JSON object to a string
                 .when()
                 .post(fullUrl);
-
         // Perform assertions on the response as needed
         int statusCode = response.getStatusCode();
         long responseTime = response.time();
