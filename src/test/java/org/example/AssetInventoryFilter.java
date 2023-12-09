@@ -6,6 +6,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.util.ResourceBundle;
 
@@ -20,7 +21,7 @@ public class AssetInventoryFilter
     private String ITUser = resourceBundle.getString("IT");
     ResourceBundle resourceBundles = ResourceBundle.getBundle("baseurl");
     private String baseUrl = resourceBundles.getString("baseUrl");
-    private String endpoint = "/asset/filter";
+    private  String endpoint = "/asset/filter";
     private String fullUrl = String.format("%s%s", baseUrl, endpoint);
     public void inventoryListingFilterStatusDamaged()
     {
@@ -103,7 +104,7 @@ public class AssetInventoryFilter
         }
         else
         {
-            test.pass("Filter Working not Working : SearchValue , SearchBy = name , Category = I.T, Flag: "+statusCode);
+            test.fail("Filter Working not Working : SearchValue , SearchBy = name , Category = I.T, Flag: "+statusCode);
         }
     }
 
@@ -143,10 +144,11 @@ public class AssetInventoryFilter
         // Send a POST request with the JSON object as the request body
         Response response = RestAssured.given()
                 .header("x-authorization", ITUser)
+                .header("deviceid","33")
                 .contentType(ContentType.JSON)
                 .body(requestBody.toString())
                 .when()
-                .post(fullUrl); // Replace with your API endpoint
+                .post(fullUrl);
 
 
 
@@ -158,7 +160,7 @@ public class AssetInventoryFilter
         }
         else
         {
-            test.pass("Filter Working not working : SearchValue , SearchBy = code , Flag: "+statusCode);
+            test.fail("Filter Working not working : SearchValue , SearchBy = code , Flag: "+statusCode);
         }
     }
 
@@ -175,7 +177,12 @@ public class AssetInventoryFilter
                 .contentType(ContentType.JSON)
                 .body(requestBody.toString())
                 .when()
-                .post(fullUrl); // Replace with your API endpoint
+                .post(fullUrl).then().extract().response();
+
+
+
+        SoftAssert softAssert1=new SoftAssert();
+        softAssert1.assertEquals("1","1");
 
         int statusCode = response.statusCode();
         if(statusCode ==200)
@@ -184,7 +191,7 @@ public class AssetInventoryFilter
         }
         else
         {
-            test.pass("Filter Working not working : SearchValue , SearchBy = serial , Flag: "+statusCode);
+            test.fail("Filter Working not working : SearchValue , SearchBy = serial , Flag: "+statusCode);
         }
     }
 

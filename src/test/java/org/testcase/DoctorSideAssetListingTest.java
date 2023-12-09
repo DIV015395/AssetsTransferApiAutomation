@@ -18,6 +18,5 @@ public class DoctorSideAssetListingTest {
         DoctorSideAssetListing list = new DoctorSideAssetListing(test);
         list.testDoctorSideAssetListing();
         extent.flush();
-
     }
 }
