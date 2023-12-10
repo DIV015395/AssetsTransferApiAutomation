@@ -5,19 +5,21 @@ import org.example.EndPointFixed;
 import org.example.HeaderUtilFixed;
 import org.pojoclass.AuthRequestForIT;
 import org.pojoclass.ItJwtToken;
+import org.storedatainpropertiesfile.PropertiesLoader;
 import org.testng.annotations.Test;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Map;
+import java.util.Properties;
 
 import static io.restassured.http.ContentType.JSON;
 
-public class ItLogin
-{
-    private String baseUrl;
+public class ItLogin {
     @Test()
     public void testItAuthentication()
     {
-        System.out.println(EndPointFixed.getAuthUrlsignin());
         AuthRequestForIT authRequestForIT = new AuthRequestForIT();
         authRequestForIT.getUsername();
         authRequestForIT.getPassword();
@@ -32,6 +34,7 @@ public class ItLogin
                 .log().all() // This line logs the complete request and response details
                 .extract().as(ItJwtToken.class);
         String jwtToken = itJwtToken.getJwtToken();
-        System.out.println(jwtToken);
+        PropertiesLoader.saveTokenToProperties("itJwtToken", jwtToken);
+
     }
 }

@@ -6,6 +6,7 @@ import org.example.EndPointFixed;
 import org.example.HeaderUtilFixed;
 import org.pojoclass.AuthRequestForDoctor;
 import org.pojoclass.DoctorJwtToken;
+import org.storedatainpropertiesfile.PropertiesLoader;
 import org.testng.annotations.Test;
 
 import java.util.Map;
@@ -31,7 +32,6 @@ public class DoctorLogin {
                 .then()
                 .log().all() // This line logs the complete request and response details
                 .extract().as(DoctorJwtToken.class);
-        String jwtToken = doctorJwtToken.getJwtToken();
-        System.out.println(jwtToken);
+        PropertiesLoader.saveTokenToProperties("doctorJwtToken", doctorJwtToken.getJwtToken());
     }
 }

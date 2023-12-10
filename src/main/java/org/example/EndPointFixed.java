@@ -13,6 +13,10 @@ public class EndPointFixed
         return authUrlsignin;
     }
     //
+    private static String inventoryListing = baseUrl + "/asset/v1/assets/inventory";
+    public static String getInventoryListing() {
+        return inventoryListing;
+    }
 
 
 }
