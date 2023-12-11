@@ -5,8 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertiesLoader {
-
+public class PropertiesLoader
+{
     private static Properties properties = new Properties();
     static String propertiesFilePath = "C:\\Users\\ManjeetSharma\\Downloads\\AssetsTransferApiAutomation\\resources\\jwt.properties";
     public static void saveTokenToProperties(String objectname ,String jwtToken)
@@ -19,7 +19,6 @@ public class PropertiesLoader {
             e.printStackTrace();
         }
         properties.setProperty(objectname, jwtToken);
-        // Save the updated properties
         try (FileOutputStream output = new FileOutputStream(propertiesFilePath))
         {
             properties.store(output, null);

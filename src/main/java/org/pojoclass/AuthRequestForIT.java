@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ResourceBundle;
 
-public class AuthRequestForIT {
-
+public class AuthRequestForIT
+{
     ResourceBundle resourceBundle = ResourceBundle.getBundle("Itlogincredential");
     // Accessing values
     @JsonProperty("username")

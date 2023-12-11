@@ -14,9 +14,16 @@ public class EndPointFixed
     }
     //
     private static String inventoryListing = baseUrl + "/asset/v1/assets/inventory";
+
     public static String getInventoryListing() {
         return inventoryListing;
     }
+
+    public static String getInitiateTransfer() {
+        return initiateTransfer;
+    }
+    private static String initiateTransfer = baseUrl + "/asset/v1/transfer/init-transfer";
+
 
 
 }
