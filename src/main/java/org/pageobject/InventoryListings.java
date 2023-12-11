@@ -1,15 +1,18 @@
 package org.testcases;
+
 import io.restassured.RestAssured;
 import org.example.EndPointFixed;
 import org.example.HeaderUtilFixed;
 import org.inventorypojoclass.ReceiverRequest;
 import org.pojoclass.ItJwtToken;
-import org.testng.annotations.Test;
+
 import java.util.Map;
+
 import static io.restassured.http.ContentType.JSON;
-public class InventoryListing {
-    @Test
-    public void inventoryListing()
+
+public class InventoryListings
+{
+    public void inventory()
     {
         ItJwtToken itJwtToken = new ItJwtToken();
         Map<String, Object> fixedHeaders = HeaderUtilFixed.createFixedHeaders();
