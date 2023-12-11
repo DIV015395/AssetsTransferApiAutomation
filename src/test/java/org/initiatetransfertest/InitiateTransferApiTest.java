@@ -24,6 +24,6 @@ public class InitiateTransferApiTest
                 .body(payload)
                 .post(EndPointFixed.getInitiateTransfer()).then()
                 .log().all().extract().response();
-     System.out.println(response.time());
+         System.out.println(response.time());
     }
 }
