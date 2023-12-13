@@ -2,12 +2,13 @@ package org.initiatetransfertest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.example.EndPointFixed;
-import org.example.HeaderUtilFixed;
+import org.utils.EndPointFixed;
+import org.utils.HeaderUtilFixed;
 import org.initiatedtransferpojo.InitiateTransferPojo;
 import org.initiatedtransferpojo.PayloadBuilder;
-import org.pojoclass.ItJwtToken;
 import org.testng.annotations.Test;
+import org.utils.JwtToken;
+
 import java.util.Map;
 public class InitiateTransferApiTest
 {
@@ -15,11 +16,11 @@ public class InitiateTransferApiTest
     public void test()
     {
         InitiateTransferPojo payload = PayloadBuilder.buildMyPayload();
-        ItJwtToken itJwtToken = new ItJwtToken();
-        Map<String, Object> fixedHeaders = HeaderUtilFixed.createFixedHeaders();
+        JwtToken jwtToken = new JwtToken();
+        Map<String, Object> fixedHeaders = HeaderUtilFixed.fixedHeaders();
         Response response = RestAssured.given()
                 .headers(fixedHeaders)
-                .header("x-authorization", itJwtToken.getJwtToken())
+                .header("x-authorization", jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
                 .body(payload)
                 .post(EndPointFixed.getInitiateTransfer()).then()

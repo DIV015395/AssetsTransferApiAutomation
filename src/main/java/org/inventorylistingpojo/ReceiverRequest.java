@@ -1,4 +1,4 @@
-package org.inventorypojoclass;
+package org.inventorylistingpojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

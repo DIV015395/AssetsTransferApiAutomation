@@ -2,10 +2,12 @@ package org.loginprod;
 
 
 import io.restassured.RestAssured;
-import org.example.EndPointFixed;
-import org.example.HeaderUtilFixed;
-import org.pojoclass.AuthRequestForDoctor;
-import org.pojoclass.DoctorJwtToken;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import org.doctorloginpojo.DoctorLoginPojo;
+import org.doctorloginpojo.DoctorPayLoadBuilder;
+import org.utils.EndPointFixed;
+import org.utils.HeaderUtilFixed;
 import org.storedatainpropertiesfile.PropertiesLoader;
 import org.testng.annotations.Test;
 
@@ -15,23 +17,17 @@ import static io.restassured.http.ContentType.JSON;
 
 public class DoctorLogin {
 
-    private String baseUrl;
     @Test()
-    public void testDoctorAuthentication()
+    public void testDoctorLogin()
     {
-        AuthRequestForDoctor authRequestForDoctor = new AuthRequestForDoctor();
-        authRequestForDoctor.getUsername();
-        authRequestForDoctor.getPassword();
-        Map<String, Object> fixedHeaders = HeaderUtilFixed.createFixedHeaders();
-        DoctorJwtToken doctorJwtToken = RestAssured.given()
+        DoctorLoginPojo payload = DoctorPayLoadBuilder.buildMyPayload();
+        Map<String, Object> fixedHeaders = HeaderUtilFixed.fixedHeaders();
+        Response response = RestAssured.given()
                 .headers(fixedHeaders)
-                .contentType(JSON)
-                .body(authRequestForDoctor)
-                .when()
-                .post(EndPointFixed.getAuthUrlsignin())
-                .then()
-                .log().all() // This line logs the complete request and response details
-                .extract().as(DoctorJwtToken.class);
-        PropertiesLoader.saveTokenToProperties("doctorJwtToken", doctorJwtToken.getJwtToken());
+                .contentType(ContentType.JSON)
+                .body(payload)
+                .post(EndPointFixed.getAuthUrlsignin()).then()
+                .log().all().extract().response();
+        PropertiesLoader.saveTokenToProperties("doctorJwtToken", response.jsonPath().getString("jwtToken"));
     }
 }
