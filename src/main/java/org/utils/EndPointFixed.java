@@ -22,6 +22,12 @@ public class EndPointFixed
     }
     private static String initiateTransfer = baseUrl + "/asset/v1/transfer/init-transfer";
 
+    public static String getDoctorListing() {
+        return doctorListing;
+    }
+
+    private static String doctorListing = baseUrl + "/asset/v1/assets/doctor-assets";
+
 
 
 }

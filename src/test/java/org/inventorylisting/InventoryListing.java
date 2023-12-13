@@ -22,7 +22,7 @@ public class InventoryListing
                 .post(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
-    @Test (description = "Negative Scenerio without device complete headers",priority = 2,pr)
+    @Test (description = "Negative Scenerio without device complete headers",priority = 2)
     public void inventoryListing1()
     {
         JwtToken jwtToken = new JwtToken();
