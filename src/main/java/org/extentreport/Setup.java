@@ -8,7 +8,8 @@ import org.testng.ITestResult;
 
 import java.util.Arrays;
 
-public class Setup implements ITestListener {
+public class Setup implements ITestListener
+{
 
     public static ExtentReports extentReports;
     public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();

@@ -1,9 +1,7 @@
 package org.doctorloginpojo;
-
 import lombok.Builder;
 import lombok.Data;
 import lombok.AllArgsConstructor;
-
 @Data
 @Builder
 @AllArgsConstructor

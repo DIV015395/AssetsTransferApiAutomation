@@ -19,7 +19,7 @@ public class InventoryListing
                 .headers(fixedHeaders)
                 .header("x-authorization", jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description = "Negative Scenerio without device complete headers",priority = 2)
@@ -30,7 +30,7 @@ public class InventoryListing
         Response response = RestAssured.given()
                 .header("x-authorization", jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description = "Negative Scenerio with doctor JWT Token",priority = 3)
@@ -42,7 +42,7 @@ public class InventoryListing
                 .headers(fixedHeaders)
                 .header("x-authorization", jwtToken.getDoctorJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description ="Without X-Hmac",priority = 4 )
@@ -53,7 +53,7 @@ public class InventoryListing
                 .headers(HeaderUtilFixed.withoutInXhmacHeaders())
                 .header("x-authorization", jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description ="Without Device Id",priority = 5 )
@@ -64,7 +64,7 @@ public class InventoryListing
                 .headers(HeaderUtilFixed.withoutInDeviceIdHeaders())
                 .header("x-authorization", jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description ="Without OS Version Id",priority = 6 )
@@ -75,7 +75,7 @@ public class InventoryListing
                 .headers(HeaderUtilFixed.withoutInOsVersionIdHeaders())
                 .header("x-authorization", jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description ="Without OS Version",priority = 7 )
@@ -86,7 +86,7 @@ public class InventoryListing
                 .headers(HeaderUtilFixed.withoutInOsVersionHeaders())
                 .header("x-authorization",jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description ="Blank All Header Value",priority = 8 )
@@ -97,7 +97,7 @@ public class InventoryListing
                 .headers(HeaderUtilFixed.blankValuesHeaders())
                 .header("x-authorization", jwtToken.getItJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
     @Test (description ="Invailid I.T Jwt Token",priority = 9 )
@@ -105,10 +105,10 @@ public class InventoryListing
     {
         JwtToken jwtToken = new JwtToken();
         Response response = RestAssured.given()
-                .headers(HeaderUtilFixed.blankValuesHeaders())
+                .headers(HeaderUtilFixed.fixedHeaders())
                 .header("x-authorization", jwtToken.getInvailidJwtToken())
                 .contentType(ContentType.JSON)
-                .post(EndPointFixed.getInventoryListing()).then()
+                .get(EndPointFixed.getInventoryListing()).then()
                 .log().all().extract().response();
     }
 }

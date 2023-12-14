@@ -1,7 +1,7 @@
 package org.utils;
 import java.util.Map;
-public class HeaderUtilFixed {
-
+public class HeaderUtilFixed
+{
     public static Map<String, Object> fixedHeaders() {
         return Map.of(
                 "X-HMAC-FROM", "MOBILE-APP",
