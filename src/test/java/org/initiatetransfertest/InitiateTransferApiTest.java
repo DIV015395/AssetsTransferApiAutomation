@@ -2,12 +2,12 @@ package org.initiatetransfertest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.utils.EndPointFixed;
-import org.utils.HeaderUtilFixed;
+import utils.EndPointFixed;
+import utils.HeaderUtilFixed;
 import org.initiatedtransferpojo.InitiateTransferPojo;
 import org.initiatedtransferpojo.PayloadBuilder;
 import org.testng.annotations.Test;
-import org.utils.JwtToken;
+import utils.JwtToken;
 
 import java.util.Map;
 public class InitiateTransferApiTest

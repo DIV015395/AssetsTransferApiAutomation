@@ -2,17 +2,22 @@ package org.extentreport;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import io.restassured.response.Response;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.util.Arrays;
 
-public class Setup implements ITestListener
+public class Setup
 {
-
     public static ExtentReports extentReports;
     public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+    Response response;
+    public Setup(  Response response)
+    {
+        this.response = response;
+    }
 
     public void onStart(ITestContext context) {
         String fileName = ExtentReportManager.getReportNameWithTimeStamp();

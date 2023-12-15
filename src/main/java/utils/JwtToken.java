@@ -1,6 +1,4 @@
-package org.utils;
-
-import java.util.Enumeration;
+package utils;
 import java.util.ResourceBundle;
 
 public class JwtToken

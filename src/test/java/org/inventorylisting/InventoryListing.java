@@ -3,9 +3,9 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import org.utils.EndPointFixed;
-import org.utils.HeaderUtilFixed;
-import org.utils.JwtToken;
+import utils.EndPointFixed;
+import utils.HeaderUtilFixed;
+import utils.JwtToken;
 
 import java.util.Map;
 public class InventoryListing

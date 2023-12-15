@@ -6,14 +6,12 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.doctorloginpojo.DoctorLoginPojo;
 import org.doctorloginpojo.DoctorPayLoadBuilder;
-import org.utils.EndPointFixed;
-import org.utils.HeaderUtilFixed;
+import utils.EndPointFixed;
+import utils.HeaderUtilFixed;
 import org.storedatainpropertiesfile.PropertiesLoader;
 import org.testng.annotations.Test;
 
 import java.util.Map;
-
-import static io.restassured.http.ContentType.JSON;
 
 public class DoctorLogin {
 
