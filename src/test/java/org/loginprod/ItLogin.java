@@ -1,10 +1,5 @@
 package org.loginprod;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
-import io.qameta.allure.Description;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Link;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -14,13 +9,11 @@ import utils.EndPointFixed;
 import utils.HeaderUtilFixed;
 import org.storedatainpropertiesfile.PropertiesLoader;
 import org.testng.annotations.Test;
-
 import java.util.Map;
-
-
 public class ItLogin
 {
     @Test
+    @TmsLink("deffrf")
     @Epic("API Tests")
     @Feature("User Authentication")
     @Story("Doctor Login")

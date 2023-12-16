@@ -4,8 +4,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import utils.EndPointFixed;
 import utils.HeaderUtilFixed;
-import org.initiatedtransferpojo.InitiateTransferPojo;
-import org.initiatedtransferpojo.PayloadBuilder;
+import org.initiatedtransferpojo.InitiateTransferPayload;
+import org.initiatedtransferpojo.InitiatedTransferPayloadBuilder;
 import org.testng.annotations.Test;
 import utils.JwtToken;
 
@@ -15,7 +15,7 @@ public class InitiateTransferApiTest
     @Test
     public void test()
     {
-        InitiateTransferPojo payload = PayloadBuilder.buildMyPayload();
+        InitiateTransferPayload payload = InitiatedTransferPayloadBuilder.buildMyPayload();
         JwtToken jwtToken = new JwtToken();
         Map<String, Object> fixedHeaders = HeaderUtilFixed.fixedHeaders();
         Response response = RestAssured.given()

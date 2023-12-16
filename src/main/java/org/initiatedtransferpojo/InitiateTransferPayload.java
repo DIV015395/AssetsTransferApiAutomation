@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Builder
-public  class  InitiateTransferPojo
+public  class InitiateTransferPayload
 {
     private String receiverId;
     private String receiverType;
