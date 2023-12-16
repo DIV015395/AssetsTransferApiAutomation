@@ -10,6 +10,7 @@
 
   <build>
     <plugins>
+      <!-- Maven Surefire Plugin for running tests -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -21,8 +22,19 @@
           <forkCount>0</forkCount>
         </configuration>
       </plugin>
+
+      <!-- Allure Maven Plugin for generating Allure reports -->
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>2.10.0</version> <!-- Use the latest version -->
+        <configuration>
+          <reportVersion>2.13.0</reportVersion> <!-- Use the latest version -->
+        </configuration>
+      </plugin>
     </plugins>
   </build>
+
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
@@ -32,7 +44,7 @@
     <gsonVersion>2.10</gsonVersion>
     <extentVersion>5.0.9</extentVersion>
     <datafakerVersion>1.8.0</datafakerVersion>
-    <lombokVersion>1.18.24</lombokVersion>
+    <lombokVersion>1.18.22</lombokVersion>
     <apacheCommonLangVersion>3.12.0</apacheCommonLangVersion>
     <javersVersion>6.12.0</javersVersion>
   </properties>
@@ -45,11 +57,33 @@
       <version>${restassuredVersion}</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>2.25.0</version>
+    </dependency>
+
+
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>${testngVersion}</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-rest-assured</artifactId>
+      <version>2.17.0</version> <!-- Use the latest version -->
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-junit5</artifactId>
+      <version>2.17.0</version> <!-- Use the latest version -->
+      <scope>test</scope>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
