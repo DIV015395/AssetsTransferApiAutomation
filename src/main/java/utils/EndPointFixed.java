@@ -28,6 +28,12 @@ public class EndPointFixed
 
     private static String doctorListing = baseUrl + "/asset/v1/assets/doctor-assets";
 
+    public static String getRevokeAssets() {
+        return revokeAssets;
+    }
+
+    private static String revokeAssets = baseUrl + "/asset/v1/transfer/revoke-initiated-asset";
+
 
 
 }
