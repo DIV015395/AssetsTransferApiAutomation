@@ -35,5 +35,13 @@ public class EndPointFixed
     private static String revokeAssets = baseUrl + "/asset/v1/transfer/revoke-initiated-asset";
 
 
+    public static String getAcceptReject() {
+        return acceptReject;
+    }
+
+    private static String acceptReject = baseUrl + "/asset/v1/transfer/accept-reject";
+
+
+
 
 }

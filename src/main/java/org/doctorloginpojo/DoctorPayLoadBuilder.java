@@ -1,7 +1,4 @@
 package org.doctorloginpojo;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.ResourceBundle;
 
 public class DoctorPayLoadBuilder
