@@ -41,6 +41,12 @@ public class EndPointFixed
 
     private static String acceptReject = baseUrl + "/asset/v1/transfer/accept-reject";
 
+    public static String getEditAssetTransfer() {
+        return editAssetTransfer;
+    }
+
+    private static String editAssetTransfer  = baseUrl + "/asset/v1/transfer/edit-initiated-asset";
+
 
 
 

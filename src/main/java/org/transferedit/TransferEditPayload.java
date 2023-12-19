@@ -17,7 +17,7 @@ public class TransferEditPayload {
     @Builder
     public static class Accessory {
         private int accessoryId;
-        private String quantity;
+        private int quantity;
         private String type;
         private int senderQty;
     }

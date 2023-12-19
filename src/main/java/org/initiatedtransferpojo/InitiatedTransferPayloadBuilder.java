@@ -12,7 +12,7 @@ public class InitiatedTransferPayloadBuilder
                         InitiateTransferPayload.Asset.builder()
                                 .assetId("8")
                                 .status("Working")
-                                .remark("This for asset 25 remark by sender! from QA server response time check")
+                                .remark("Remarks mention here")
                                 .accessories(List.of(
                                         InitiateTransferPayload.Asset.Accessory.builder()
                                                 .accessoryId(2)
@@ -23,8 +23,8 @@ public class InitiatedTransferPayloadBuilder
                                 ))
                                 .images(List.of(
                                         InitiateTransferPayload.Asset.Image.builder()
-                                                .thumbUrl("S3 URL")
-                                                .imageUrl("image URL")
+                                                .thumbUrl("ggggggggg")
+                                                .imageUrl("uuuuuuu")
                                                 .build()
                                 ))
                                 .build()
@@ -289,7 +289,7 @@ public class InitiatedTransferPayloadBuilder
                                     .remark("Enter Remarks")
                                     .accessories(List.of(
                                             InitiateTransferPayload.Asset.Accessory.builder()
-                                                    .accessoryId(6)
+                                                    .accessoryId(2)
                                                     .quantity(5)
                                                     .type("Essential")
                                                     .senderQty(4)
