@@ -16,7 +16,7 @@ public class InitiatedTransferPayloadBuilder
                                 .accessories(List.of(
                                         InitiateTransferPayload.Asset.Accessory.builder()
                                                 .accessoryId(2)
-                                                .quantity(7)
+                                                .quantity(5)
                                                 .type("Essential")
                                                 .senderQty(1)
                                                 .build()

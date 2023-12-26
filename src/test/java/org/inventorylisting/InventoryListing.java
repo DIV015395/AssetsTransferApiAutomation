@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import utils.EndPointFixed;
 import utils.HeaderUtilFixed;
 import utils.JwtToken;
-
 import java.util.Map;
 public class InventoryListing
 {

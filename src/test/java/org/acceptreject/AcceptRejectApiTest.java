@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class AcceptRejectApiTest {
     @Test
-    public void revokeTest()
+    public void acceptRejectTest()
     {
         AcceptRejectPayload payload = AcceptRejectPayloadBuilder.buildPayload();
         JwtToken jwtToken = new JwtToken();
