@@ -1,12 +1,11 @@
 package org.acceptreject;
-
 import lombok.Builder;
 import lombok.Data;
-
 import java.util.List;
 @Data
 @Builder
-public class AcceptRejectPayload {
+public class AcceptRejectPayload
+{
         private int assetId;
         private String status;
         private String remark;
@@ -23,11 +22,10 @@ public class AcceptRejectPayload {
         }
         @Data
         @Builder
-
-        public static class Image {
+        public static class Image
+        {
             private String thumbUrl;
             private String imageUrl;
-
         }
 }
 

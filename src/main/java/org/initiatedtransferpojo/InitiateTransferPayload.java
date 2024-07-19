@@ -1,10 +1,7 @@
 package org.initiatedtransferpojo;
-
 import lombok.Builder;
 import lombok.Data;
-
 import java.util.List;
-
 @Data
 @Builder
 public  class InitiateTransferPayload
@@ -30,7 +27,6 @@ public  class InitiateTransferPayload
             private String type;
             private int senderQty;
         }
-
         @Data
         @Builder
         public static class Image {

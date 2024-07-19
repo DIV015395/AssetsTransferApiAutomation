@@ -23,8 +23,8 @@ public class InitiatedTransferPayloadBuilder
                                 ))
                                 .images(List.of(
                                         InitiateTransferPayload.Asset.Image.builder()
-                                                .thumbUrl("ggggggggg")
-                                                .imageUrl("uuuuuuu")
+                                                .thumbUrl("S3 URL")
+                                                .imageUrl("image URL")
                                                 .build()
                                 ))
                                 .build()
@@ -83,10 +83,8 @@ public class InitiatedTransferPayloadBuilder
                                                     .thumbUrl("S3 URL")
                                                     .imageUrl("image URL")
                                                     .build()
-                                    ))
-                                    .build()
-                    ))
-                    .build();
+                                    )).build()
+                    )).build();
         }
     }
     public static class PayloadStatusIsEmpty{
@@ -104,22 +102,16 @@ public class InitiatedTransferPayloadBuilder
                                                     .accessoryId(6)
                                                     .quantity(5)
                                                     .type("Essential")
-                                                    .senderQty(4)
-                                                    .build()
+                                                    .senderQty(4).build()
                                     ))
                                     .images(List.of(
                                             InitiateTransferPayload.Asset.Image.builder()
                                                     .thumbUrl("S3 URL")
-                                                    .imageUrl("image URL")
-                                                    .build()
-                                    ))
-                                    .build()
-                    ))
-                    .build();
+                                                    .imageUrl("image URL").build()
+                                    )).build()
+                    )).build();
         }
     }
-
-
     public static class PayloadStatusIsWrong{
         public static InitiateTransferPayload buildMyPayload() {
             return InitiateTransferPayload.builder()
@@ -149,7 +141,6 @@ public class InitiatedTransferPayloadBuilder
                     .build();
         }
     }
-
     public static class AccessoriesTypeIsEmpty
     {
         public static InitiateTransferPayload buildMyPayload() {
@@ -179,9 +170,7 @@ public class InitiatedTransferPayloadBuilder
                     ))
                     .build();
         }
-
     }
-
     public static class AccessoriesTypeIsWrong
     {
         public static InitiateTransferPayload buildMyPayload() {
@@ -211,9 +200,7 @@ public class InitiatedTransferPayloadBuilder
                     ))
                     .build();
         }
-
     }
-
     public static class AssetsImageEmpty
     {
         public static InitiateTransferPayload buildMyPayload() {
@@ -243,7 +230,6 @@ public class InitiatedTransferPayloadBuilder
                     ))
                     .build();
         }
-
     }
     public static class RemarksIsEmpty
     {
@@ -275,16 +261,16 @@ public class InitiatedTransferPayloadBuilder
                     .build();
         }
     }
-
     public static class AssetIdOutOfDatabase
     {
-        public static InitiateTransferPayload buildMyPayload() {
+        public static InitiateTransferPayload buildMyPayload()
+        {
             return InitiateTransferPayload.builder()
                     .receiverId("13")
                     .receiverType("Doctor")
                     .assets(List.of(
                             InitiateTransferPayload.Asset.builder()
-                                    .assetId("8")
+                                    .assetId("800")
                                     .status("Working")
                                     .remark("Enter Remarks")
                                     .accessories(List.of(

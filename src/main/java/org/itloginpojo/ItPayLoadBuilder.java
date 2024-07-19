@@ -1,9 +1,5 @@
 package org.itloginpojo;
-
-import org.doctorloginpojo.DoctorLoginPojo;
-
 import java.util.ResourceBundle;
-
 public class ItPayLoadBuilder
 {
     public static ItLoginPojo buildMyPayload() {

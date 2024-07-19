@@ -8,7 +8,6 @@ import org.initiatedtransferpojo.InitiateTransferPayload;
 import org.initiatedtransferpojo.InitiatedTransferPayloadBuilder;
 import org.testng.annotations.Test;
 import utils.JwtToken;
-
 import java.util.Map;
 public class InitiateTransferApiTest
 {
@@ -25,6 +24,19 @@ public class InitiateTransferApiTest
                 .body(payload)
                 .post(EndPointFixed.getInitiateTransfer()).then()
                 .log().all().extract().response();
-         System.out.println(response.time());
+    }
+    @Test
+    public void test2()
+    {
+        InitiateTransferPayload payload = InitiatedTransferPayloadBuilder.PayloadReceiverIdIsDoctorAndTypeIsIt.buildMyPayload();
+        JwtToken jwtToken = new JwtToken();
+        Map<String, Object> fixedHeaders = HeaderUtilFixed.fixedHeaders();
+        Response response = RestAssured.given()
+                .headers(fixedHeaders)
+                .header("x-authorization", jwtToken.getItJwtToken())
+                .contentType(ContentType.JSON)
+                .body(payload)
+                .post(EndPointFixed.getInitiateTransfer()).then()
+                .log().all().extract().response();
     }
 }

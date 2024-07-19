@@ -23,5 +23,7 @@ public class AcceptRejectApiTest {
                 .body(payload)
                 .post(EndPointFixed.getAcceptReject()).then()
                 .log().all().extract().response();
+
     }
+
 }
